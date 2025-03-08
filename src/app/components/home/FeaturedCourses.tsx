@@ -52,15 +52,18 @@ const FeaturedCourses: React.FC = () => {
     }));
   };
   return (
-    <div className=" text-gray-800 max-w-7xl mx-auto space-y-5 py-10">
+    <div className=" text-gray-800 max-w-7xl mx-auto space-y-5 pb-20">
       <h1 className="font-bold text-3xl text-center md:text-start">
         Our <span className="text-fuchsia-700">Featured</span> Courses
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 px-4 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 px-4 md:px-0 perspective-1000 preserve-3d">
         {courseDetails.map((course) => {
           return (
-            <div key={course.id} className="shadow-md rounded-lg bg-white ">
-              <div>
+            <div
+              key={course.id}
+              className="shadow-md rounded-lg hover:perspective-1000 bg-white hover:scale-105 hover:shadow-xl transform rotate-y-12 transition-transform duration-500 hover:rotate-y-20  "
+            >
+              <div className="rounded-t-lg ">
                 <Image
                   src={course.image}
                   alt={course.title}
@@ -68,11 +71,13 @@ const FeaturedCourses: React.FC = () => {
                   height={500}
                   className="rounded-t-lg"
                 />
-                <div className={`relative w-32 bottom-8 left-0 rounded-tr-2xl opacity-90 text-white px-2 py-1 ${course.color} `}>
+                <div
+                  className={`relative w-32 bottom-8 left-0 rounded-tr-2xl opacity-90 text-white px-2 py-1 ${course.color} `}
+                >
                   Recommended
                 </div>
               </div>
-              <div className="space-y-3 px-6 pb-6">
+              <div className="space-y-3 px-6 pb-6 ">
                 <h2 className="font-semibold text-xl">{course.title}</h2>
                 <p>{course.description}</p>
                 <div className="flex gap-1">

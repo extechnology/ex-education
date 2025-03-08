@@ -18,12 +18,12 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-md p-4">
-      <div className="container mx-auto flex justify-between items-center max-w-7xl">
+    <nav className="bg-slate-300  shadow-md p-4">
+      <div className="container mx-auto flex justify-between py-5 items-center max-w-7xl">
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold text-gray-800 dark:text-white"
+          className="text-2xl font-bold  text-slate-500"
         >
           ExEdu
         </Link>
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
             <li key={href}>
               <Link
                 href={href}
-                className={`px-3 py-2 rounded-md transition ${
+                className={`px-3 py-2 rounded-md transition text-lg font-medium text-slate-500 ${
                   pathname === href ? "bg-gray-200 dark:bg-gray-700" : ""
                 }`}
               >
@@ -46,14 +46,13 @@ const Navbar: React.FC = () => {
 
         {/* User Profile */}
         <div className="hidden md:flex items-center space-x-4">
-          <button  className="flex items-center gap-2">
-            <User size={16} />
+          <button className="flex items-center gap-2 text-lg font-medium text-slate-500">
+            <User size={20} />
             Profile
           </button>
-
         </div>
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden text-gray-800" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -73,9 +72,7 @@ const Navbar: React.FC = () => {
             </li>
           ))}
           <li>
-            <button className="w-full">
-              Profile
-            </button>
+            <button className="w-full">Profile</button>
           </li>
         </ul>
       )}
