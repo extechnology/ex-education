@@ -11,6 +11,7 @@ const courseDetails = [
     description: "Extract insights from data using AI and analytics.",
     image:
       "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169834.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+    color: "bg-fuchsia-600",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const courseDetails = [
     description: "Design and build intelligent automated systems.",
     image:
       "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+    color: "bg-sky-600",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const courseDetails = [
       "Powerful language for web, mobile, and enterprise applications.",
     image:
       "https://img.freepik.com/premium-photo/css-javascript-html-usage-monitor-closeup-function-source-code-abstract-it-technology-background-software-source-code_372999-2337.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+    color: "bg-orange-600",
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ const courseDetails = [
     description: "Versatile programming language for web, data, and automation",
     image:
       "https://img.freepik.com/premium-vector/vector-illustration-cute-green-python-coding-laptop_831490-4588.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+    color: "bg-green-600",
   },
 ];
 
@@ -48,22 +52,27 @@ const FeaturedCourses: React.FC = () => {
     }));
   };
   return (
-    <div className=" text-gray-800 max-w-7xl mx-auto space-y-5 py-5">
-      <h1 className="font-bold text-3xl">
+    <div className=" text-gray-800 max-w-7xl mx-auto space-y-5 py-10">
+      <h1 className="font-bold text-3xl text-center md:text-start">
         Our <span className="text-fuchsia-700">Featured</span> Courses
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 px-4 md:px-0">
         {courseDetails.map((course) => {
           return (
-            <div key={course.id} className="shadow-md rounded-lg">
-              <Image
-                src={course.image}
-                alt={course.title}
-                width={500}
-                height={500}
-                className="rounded-t-lg"
-              />
-              <div className="space-y-3 p-6">
+            <div key={course.id} className="shadow-md rounded-lg bg-white ">
+              <div>
+                <Image
+                  src={course.image}
+                  alt={course.title}
+                  width={500}
+                  height={500}
+                  className="rounded-t-lg"
+                />
+                <div className={`relative w-32 bottom-8 left-0 rounded-tr-2xl opacity-90 text-white px-2 py-1 ${course.color} `}>
+                  Recommended
+                </div>
+              </div>
+              <div className="space-y-3 px-6 pb-6">
                 <h2 className="font-semibold text-xl">{course.title}</h2>
                 <p>{course.description}</p>
                 <div className="flex gap-1">
@@ -80,7 +89,10 @@ const FeaturedCourses: React.FC = () => {
                     />
                   ))}
                 </div>
-                <Link href="/" className="text-gray-800 hover:underline font-medium  rounded-full">
+                <Link
+                  href="/"
+                  className="text-gray-800 hover:underline font-medium  rounded-full"
+                >
                   See More
                 </Link>
               </div>

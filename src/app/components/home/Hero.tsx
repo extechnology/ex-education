@@ -3,15 +3,16 @@ import { Cpu } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl text-gray-800 ">
+    <div className="grid grid-cols-1 h-screen md:grid-cols-2 mx-auto max-w-7xl text-gray-800 ">
       <div className="content-center space-y-6">
-        <h1 className="text-5xl font-bold">
-          Kerala's Leading <span className="text-fuchsia-700">Hybrid</span> Education Platform
+        <h1 className="text-6xl font-bold">
+          Kerala&apos;s Leading <span className="text-fuchsia-700">Hybrid</span>{" "}
+          Education Platform
         </h1>
         <p className="text-xl">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, fugiat.
         </p>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
           Get Started
         </button>
       </div>
@@ -29,8 +30,8 @@ const Hero: React.FC = () => {
         <div className="flex justify-center">
           <Image
             src="/person_with_laptop.png"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             alt=""
           />
         </div>

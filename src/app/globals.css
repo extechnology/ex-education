@@ -4,12 +4,35 @@ body {
   font-family: var(--font-merriweather-sans), sans-serif;
 }
 
-
+::-webkit-scrollbar{
+  display: none;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+  }
+  50% {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+  }
+  100% {
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+  }
+}
+
+.glowing-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-align: center;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
 
 @theme inline {
   --color-background: var(--background);
