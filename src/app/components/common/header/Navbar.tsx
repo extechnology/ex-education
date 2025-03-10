@@ -52,8 +52,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed z-20 w-full md:px-10 lg:px-0 ${
-        scrolling ? "bg-white duration-500 shadow-md" : "bg-slate-300"
+      className={`fixed z-20 w-full md:px-10 lg:px-0  ${
+        scrolling ? "bg-white duration-500 shadow-md " : "bg-slate-300"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center max-w-7xl py-5 pl-1 pr-5 md:px-0">
@@ -107,18 +107,18 @@ const Navbar: React.FC = () => {
           initial="hidden"
           animate="visible"
           variants={menuVariants}
-          className="md:hidden mt-4 bg-slate-400 p-4"
+          className="md:hidden mt-4 bg-slate-300 p-4 border-slate-300 shadow-lg border-b "
         >
           <ul className="space-y-3">
             {navItems.map(({ label, href }) => (
               <motion.li
                 key={href}
                 variants={itemVariants}
-                className="border-b-2 border-slate-300 pb-2 last:border-none"
+                className="border-b-2 border-slate-200 pb-2 last:border-none"
               >
                 <Link
                   href={href}
-                  className="block text-white py-2"
+                  className="block text-gray-500 py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {label}
