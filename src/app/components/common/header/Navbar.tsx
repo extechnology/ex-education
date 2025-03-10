@@ -8,11 +8,24 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const navItems = [
-  { label: "Dashboard", href: "/dashboard" },
-  { label: "Customers", href: "/customers" },
-  { label: "Reports", href: "/reports" },
-  { label: "Settings", href: "/settings" },
+  { label: "Home", href: "/dashboard" },
+  { label: "About", href: "/customers" },
+  { label: "Services", href: "/reports" },
+  { label: "Contact", href: "/settings" },
 ];
+const menuVariants = {
+  hidden: { y: "-100%", opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeInOut", staggerChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+};
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +52,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed z-20 w-full ${
+      className={`fixed z-20 w-full md:px-10 lg:px-0 ${
         scrolling ? "bg-white duration-500 shadow-md" : "bg-slate-300"
       }`}
     >
@@ -93,24 +106,14 @@ const Navbar: React.FC = () => {
           ref={menuRef}
           initial="hidden"
           animate="visible"
-          variants={{
-            hidden: { y: "-100%", opacity: 0 },
-            visible: {
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.4, ease: "easeInOut" },
-            },
-          }}
+          variants={menuVariants}
           className="md:hidden mt-4 bg-slate-400 p-4"
         >
           <ul className="space-y-3">
             {navItems.map(({ label, href }) => (
               <motion.li
                 key={href}
-                variants={{
-                  hidden: { opacity: 0, y: -20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+                variants={itemVariants}
                 className="border-b-2 border-slate-300 pb-2 last:border-none"
               >
                 <Link
@@ -122,7 +125,7 @@ const Navbar: React.FC = () => {
                 </Link>
               </motion.li>
             ))}
-            <li className="py-3">
+            <li className="py-5">
               <Link
                 href="/"
                 className="w-full shadow-md rounded-2xl px-3 py-2 bg-gray-100 text-fuchsia-600 border-white block text-center"

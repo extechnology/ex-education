@@ -68,7 +68,7 @@ const FeaturedCourses: React.FC = () => {
     }));
   };
   return (
-    <div className=" text-gray-800 max-w-7xl mx-auto space-y-5 pb-20 ">
+    <div className=" text-gray-800 max-w-7xl mx-auto space-y-5 pb-20 md:px-10 lg:px-0">
       <h1 className="font-bold text-3xl text-center md:text-start  pb-3">
         Our <span className="text-fuchsia-700">Featured</span> Courses
       </h1>
