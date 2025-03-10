@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const navItems = [
-  { label: "Home", href: "/dashboard" },
-  { label: "About", href: "/customers" },
-  { label: "Services", href: "/reports" },
-  { label: "Contact", href: "/settings" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/" },
+  { label: "Services", href: "/" },
+  { label: "Contact", href: "/" },
 ];
 const menuVariants = {
   hidden: { y: "-100%", opacity: 0 },
