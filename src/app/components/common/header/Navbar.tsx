@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
         scrolling ? "bg-white duration-500 shadow-md" : "bg-slate-300"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center max-w-7xl py-5 px-5 md:px-0">
+      <div className="container mx-auto flex justify-between items-center max-w-7xl py-5 pl-1 pr-5 md:px-0">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-slate-500">
           <Image
