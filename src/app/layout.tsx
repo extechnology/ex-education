@@ -1,29 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/common/header/Navbar";
-import { Merriweather_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Footer from "./components/common/footer/Footer";
 
 
-const merriweatherSans = Merriweather_Sans({
-  variable: "--font-merriweather-sans",
-  subsets: ["latin"],
-})
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  weight: ["400", "700"], // Add font weights
+  variable: "--font-poppins",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "ExEdu",
-  description: "AI Hybrid Education",
+  description: "Hybrid AI Education",
 };
 
 export default function RootLayout({
@@ -34,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${merriweatherSans.variable} antialiased`}
+        className={`${poppins.variable} antialiased`}
       >
         <main >
           <Navbar />

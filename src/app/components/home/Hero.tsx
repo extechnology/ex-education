@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero: React.FC = () => {
   return (
-    <div className="bg-gradient-to-b from-slate-300 to-slate-100">
+    <div className="bg-gradient-to-b from-slate-300 via-slate-300 to-[F4F7FB] pt-20">
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl text-gray-800 md:py-10 py-10">
         <div className="content-center space-y-6 px-3 md:px-0">
           <h1 className="text-5xl md:text-6xl font-bold ">

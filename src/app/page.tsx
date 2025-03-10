@@ -4,7 +4,7 @@ import Hero from "./components/home/Hero";
 
 export default function Home() {
   return (
-    <div className="bg-zinc-100">
+    <div className="bg-[#F4F7FB]">
       <Hero/>
       <FeaturedCourses/>
       <AboutUs/>

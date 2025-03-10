@@ -1,10 +1,13 @@
 // components/Navbar.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, User } from "lucide-react"; // Icons
+import { Menu, X, User } from "lucide-react";
+import { motion } from "framer-motion";
+import { useRef } from "react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Dashboard", href: "/dashboard" },
@@ -15,17 +18,60 @@ const navItems = [
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const menuVariants = {
+    hidden: { y: "-100%", opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.4, ease: "easeInOut", staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <nav className="bg-slate-300  shadow-md p-4">
-      <div className="container mx-auto flex justify-between py-5 items-center max-w-7xl">
+    <nav
+      className={`fixed z-20  w-full ${
+        scrolling ? "bg-white duration-500 shadow-md " : "bg-slate-300"
+      } `}
+    >
+      <div className="container mx-auto flex justify-between  items-center max-w-7xl py-5 px-5 md:px-0">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-2xl font-bold  text-slate-500"
-        >
-          ExEdu
+        <Link href="/" className="text-2xl font-bold  text-slate-500">
+          <Image src="/ededu_logo (2).png" alt="logo" width={220} height={220} />
         </Link>
 
         {/* Desktop Menu */}
@@ -52,29 +98,48 @@ const Navbar: React.FC = () => {
           </button>
         </div>
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-gray-800" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="md:hidden text-gray-800"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden mt-4 space-y-3 bg-white dark:bg-gray-900 p-4">
-          {navItems.map(({ label, href }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className="block py-2"
-                onClick={() => setIsOpen(false)}
+        <motion.div
+          ref={menuRef}
+          initial="hidden"
+          animate={isOpen ? "visible" : "hidden"}
+          variants={menuVariants}
+        >
+          <ul className="md:hidden mt-4 space-y-3 bg-slate-600 p-4">
+            {navItems.map(({ label, href }) => (
+              <motion.li
+                key={href}
+                variants={itemVariants}
+                className="border-b-2 border-slate-500 pb-2 last:border-none"
               >
-                {label}
+                <Link
+                  href={href}
+                  className="block py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </Link>
+              </motion.li>
+            ))}
+            <li className="py-3">
+              <Link
+                href="/"
+                className="w-full shadow-md rounded-2xl px-3 py-2 bg-gray-100 text-fuchsia-600 border-white"
+              >
+                Profile
               </Link>
             </li>
-          ))}
-          <li>
-            <button className="w-full">Profile</button>
-          </li>
-        </ul>
+          </ul>
+        </motion.div>
       )}
     </nav>
   );

@@ -9,7 +9,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r  from-slate-400 to-slate-500 text-white py-10 shadow-t-2xl">
+    <div className="bg-gradient-to-r  from-slate-800 to-slate-900 text-white pt-10 pb-7 shadow-t-2xl">
       <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto px-5 space-y-8 md:space-y-0">
         <div>
           <h1 className="font-bold text-3xl">Quick Links</h1>
@@ -60,9 +60,9 @@ const Footer: React.FC = () => {
           </ul>
         </div>
       </div>
-      {/* <hr className="w-[82%] mx-auto mt-10 text-slate-300 border-[1px]" />
+      <hr className=" mt-10 text-slate-700 border-[1px]" />
       <div className="max-w-7xl mx-auto px-5 pt-5">
-        <div className="flex justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 md:space-y-0">
           <div>Powered By Extechnology</div>
           <div>
             <p className="">
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
