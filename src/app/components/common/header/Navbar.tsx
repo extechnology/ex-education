@@ -1,12 +1,10 @@
-// components/Navbar.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, User } from "lucide-react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import Image from "next/image";
 
 const navItems = [
@@ -19,37 +17,16 @@ const navItems = [
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const menuVariants = {
-    hidden: { y: "-100%", opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.4, ease: "easeInOut", staggerChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-  };
-
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolling(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolling(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    setMounted(true);
-
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -57,21 +34,24 @@ const Navbar: React.FC = () => {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <nav
-      className={`fixed z-20  w-full ${
-        scrolling ? "bg-white duration-500 shadow-md " : "bg-slate-300"
-      } `}
+      className={`fixed z-20 w-full ${
+        scrolling ? "bg-white duration-500 shadow-md" : "bg-slate-300"
+      }`}
     >
-      <div className="container mx-auto flex justify-between  items-center max-w-7xl py-5 px-5 md:px-0">
+      <div className="container mx-auto flex justify-between items-center max-w-7xl py-5 px-5 md:px-0">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold  text-slate-500">
-          <Image src="/ededu_logo (2).png" alt="logo" width={220} height={220} />
+        <Link href="/" className="text-2xl font-bold text-slate-500">
+          <Image
+            src="/ededu_logo (2).png"
+            alt="logo"
+            width={220}
+            height={220}
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -97,6 +77,7 @@ const Navbar: React.FC = () => {
             Profile
           </button>
         </div>
+
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-gray-800"
@@ -111,19 +92,30 @@ const Navbar: React.FC = () => {
         <motion.div
           ref={menuRef}
           initial="hidden"
-          animate={isOpen ? "visible" : "hidden"}
-          variants={menuVariants}
+          animate="visible"
+          variants={{
+            hidden: { y: "-100%", opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.4, ease: "easeInOut" },
+            },
+          }}
+          className="md:hidden mt-4 bg-slate-400 p-4"
         >
-          <ul className="md:hidden mt-4 space-y-3 bg-slate-600 p-4">
+          <ul className="space-y-3">
             {navItems.map(({ label, href }) => (
               <motion.li
                 key={href}
-                variants={itemVariants}
-                className="border-b-2 border-slate-500 pb-2 last:border-none"
+                variants={{
+                  hidden: { opacity: 0, y: -20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                className="border-b-2 border-slate-300 pb-2 last:border-none"
               >
                 <Link
                   href={href}
-                  className="block py-2"
+                  className="block text-white py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {label}
@@ -133,7 +125,7 @@ const Navbar: React.FC = () => {
             <li className="py-3">
               <Link
                 href="/"
-                className="w-full shadow-md rounded-2xl px-3 py-2 bg-gray-100 text-fuchsia-600 border-white"
+                className="w-full shadow-md rounded-2xl px-3 py-2 bg-gray-100 text-fuchsia-600 border-white block text-center"
               >
                 Profile
               </Link>

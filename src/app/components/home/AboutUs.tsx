@@ -39,11 +39,10 @@ const AboutUs: React.FC = () => {
             consequatur animi eligendi laboriosam dolores ipsam illo fuga! Vitae
             iure sunt alias.
           </p>
-          <Link
-            href={"/"}
-            className="py-2 px-3 rounded-xl font-bold hover:bg-fuchsia-800 bg-fuchsia-600 text-white"
-          >
-            For More Queries
+          <Link href={"/"} className="">
+            <button className="py-2 px-3 rounded-xl w-42 hover:w-58 transition-all duration-500 font-bold hover:bg-fuchsia-700 bg-fuchsia-600 text-white">
+              For More Queries
+            </button>
           </Link>
         </div>
       </div>

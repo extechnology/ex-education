@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
             fugiat.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-blue-700 hover:bg-blue-600 w-36 hover:w-50  hover:rounded-xl hover:shadow transition-all duration-500 text-white font-bold py-2 px-4 rounded-lg">
             Get Started
           </button>
         </div>
