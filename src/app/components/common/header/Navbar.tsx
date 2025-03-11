@@ -9,9 +9,9 @@ import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/" },
-  { label: "Services", href: "/" },
-  { label: "Contact", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/service" },
+  { label: "Contact", href: "/contact" },
 ];
 const menuVariants = {
   hidden: { y: "-100%", opacity: 0 },
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
               <Link
                 href={href}
                 className={`px-3 py-2 rounded-md transition text-lg font-medium text-slate-500 ${
-                  pathname === href ? "bg-gray-200 dark:bg-gray-700" : ""
+                  pathname === href ? "bg-transparent " : "bg-transparent"
                 }`}
               >
                 {label}
