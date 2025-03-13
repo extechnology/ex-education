@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
         <div className="content-center space-y-6 px-3 md:px-0">
           <h1 className="text-5xl md:text-6xl font-bold leading-14 md:leading-16">
             Kerala&apos;s Leading{" "}
-            <span className="text-fuchsia-700">Hybrid</span> Education Platform
+            <span className="text-fuchsia-700">Hybrid AI</span> Education Platform
           </h1>
           <p className="text-xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
