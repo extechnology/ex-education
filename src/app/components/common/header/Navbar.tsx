@@ -9,8 +9,8 @@ import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/service" },
+  { label: "Courses ", href: "/course" },
+  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 const menuVariants = {
@@ -60,10 +60,10 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-slate-500">
           <Image
-            src="/ededu_logo (2).png"
+            src="/ex edu logo-03.png"
             alt="logo"
-            width={220}
-            height={220}
+            width={200}
+            height={200}
           />
         </Link>
 

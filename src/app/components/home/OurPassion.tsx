@@ -27,17 +27,17 @@ const AboutUs: React.FC = () => {
         <div className="text-gray-800 content-center space-y-5  md:px-0">
           <p className="text-xl font-semibold">
             <span className="bg-zinc-100 text-fuchsia-600 px-2 py-1 rounded-lg">
-              About Us
+              Our Passion
             </span>
           </p>
           <h1 className="font-bold text-4xl w-[90%]">
-            Learn From Industry Experts Around The Globe
+            Transform Your Passion into Profession, Join With Us
           </h1>
           <p className="w-[90%] text-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
-            quidem nesciunt culpa rerum ipsam sint obcaecati! Voluptatum aliquid
-            consequatur animi eligendi laboriosam dolores ipsam illo fuga! Vitae
-            iure sunt alias.
+            Unlock Your Future with exedu! Master Digital Marketing, Graphics
+            Design, Prompt AI, and Robotics. Transform Your Skills, Embrace
+            Innovation, and Lead the Tech Revolution. Enroll Today and Shape
+            Tomorrow with Hybrid AI Education!
           </p>
           <Link href={"/"} className="">
             <button className="py-2 px-3 rounded-xl w-42 hover:w-58 transition-all duration-500 font-bold hover:bg-fuchsia-700 bg-fuchsia-600 text-white">
