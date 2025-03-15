@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
           <ul className="space-y-2 pt-4">
             <li>ExEdu</li>
             <li>Ramanattukara, Kerala</li>
-            <li>Ph: +91 0000000000</li>
+            <li>Ph: +91 9072123466</li>
             <li>Email : exedu@example.com</li>
           </ul>
         </div>
@@ -71,10 +71,10 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex gap-1">
             <div>
-                <Link href={"/"}>Privacy Policy |</Link>
+              <Link href={"/"}>Privacy Policy |</Link>
             </div>
             <div>
-                <Link href={"/"}>Terms & Conditions</Link>
+              <Link href={"/"}>Terms & Conditions</Link>
             </div>
           </div>
         </div>

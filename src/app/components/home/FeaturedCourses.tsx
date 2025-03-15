@@ -10,7 +10,7 @@ const courseDetails = [
     description:
       "With AI and Graphics Design combines creativity and technology to drive impactful campaigns. Leverage AI tools for data-driven strategies and stunning visuals to engage audiences, boost brand presence, and achieve measurable results in the digital world.",
     image:
-      "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169834.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     color: "bg-fuchsia-600",
   },
   {
@@ -19,7 +19,7 @@ const courseDetails = [
     description:
       "Through our Graphics Design courses blend creativity with advanced tools, empowering you to master visual storytelling, branding, and design. Transform your passion into a profession with hands-on training and industry-relevant skills.",
     image:
-      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "https://img.freepik.com/free-psd/graphic-designer-top-view-mockup-with-laptop_23-2147675736.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     color: "bg-sky-400",
   },
   {
@@ -28,7 +28,8 @@ const courseDetails = [
     description:
       "Our Robotics learning offers hands-on in automation, AI, and advanced technology. Build, program, and innovate with industry-aligned training, preparing you to lead in the fast-evolving world of robotics and smart systems",
     image:
-      "https://img.freepik.com/premium-photo/css-javascript-html-usage-monitor-closeup-function-source-code-abstract-it-technology-background-software-source-code_372999-2337.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+
     color: "bg-orange-600",
   },
 ];
