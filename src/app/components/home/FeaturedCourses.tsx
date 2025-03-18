@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { Star } from "lucide-react";
 import Link from "next/link";
 
 const courseDetails = [
@@ -8,7 +7,7 @@ const courseDetails = [
     id: 1,
     title: "Digital Marketing",
     description:
-      "With AI and Graphics Design combines creativity and technology to drive impactful campaigns. Leverage AI tools for data-driven strategies and stunning visuals to engage audiences, boost brand presence, and achieve measurable results in the digital world.",
+      "AI and graphic design blend creativity and technology to craft data-driven campaigns with stunning visuals that enhance engagement and brand impact..",
     image:
       "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     color: "bg-fuchsia-600",
@@ -17,7 +16,7 @@ const courseDetails = [
     id: 2,
     title: "Graphic Design",
     description:
-      "Through our Graphics Design courses blend creativity with advanced tools, empowering you to master visual storytelling, branding, and design. Transform your passion into a profession with hands-on training and industry-relevant skills.",
+      "Our graphic design courses merge creativity with advanced tools, equipping you with visual storytelling, branding, and industry-ready skills..",
     image:
       "https://img.freepik.com/free-psd/graphic-designer-top-view-mockup-with-laptop_23-2147675736.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     color: "bg-sky-400",
@@ -26,7 +25,7 @@ const courseDetails = [
     id: 3,
     title: "Robotics",
     description:
-      "Our Robotics learning offers hands-on in automation, AI, and advanced technology. Build, program, and innovate with industry-aligned training, preparing you to lead in the fast-evolving world of robotics and smart systems",
+      "Our robotics learning provides hands-on training in automation, AI, and advanced technology, preparing you to innovate and lead in smart systems.",
     image:
       "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
 
@@ -39,10 +38,10 @@ const FeaturedCourses: React.FC = () => {
 
   
   return (
-    <div className=" text-gray-800 max-w-7xl mx-auto space-y-5 pb-20 md:px-10 lg:px-0">
-      <h1 className="font-bold text-3xl text-center md:text-start  pb-3">
+    <div className=" text-gray-800 max-w-7xl mx-auto space-y-5 py-20 md:px-10 lg:px-0">
+      {/* <h1 className="font-bold text-3xl text-center md:text-start  pb-3">
         Our <span className="text-fuchsia-700">Featured</span> Courses
-      </h1>
+      </h1> */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 gap-y-10 px-4 md:px-0 perspective-1000 preserve-3d">
         {courseDetails.map((course) => {
           return (
@@ -66,21 +65,13 @@ const FeaturedCourses: React.FC = () => {
               </div>
               <div className="space-y-3 px-6 pb-6 ">
                 <h2 className="font-semibold text-xl text-violet-600">{course.title}</h2>
-                <p className=" ">{course.description}</p>
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, index) => (
-                    <Star
-                      key={index}
-                      size={22}
-                      className="cursor-pointer  fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
+                <p className="pb-5">{course.description}</p>
+                
                 <Link
                   href="/course"
                   className="text-gray-800 hover:underline font-medium  rounded-full"
                 >
-                  See More
+                  <button className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-2">Learn More</button>
                 </Link>
               </div>
             </div>
