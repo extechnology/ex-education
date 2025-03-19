@@ -73,6 +73,7 @@ const Navbar: React.FC = () => {
             <li key={href}>
               <Link
                 href={href}
+                prefetch={true}
                 className={`px-3 py-2 rounded-md transition text-lg font-medium text-slate-500 ${
                   pathname === href ? "bg-transparent " : "bg-transparent"
                 }`}

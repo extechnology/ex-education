@@ -46,30 +46,31 @@ function Contact() {
     }
   };
 
-
   return (
     <div>
       <div className="h-screen pt-20 flex">
-        <div className="w-1/3 bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 opacity-80">
+        <div className="w-1/3 bg-gradient-to-r from-blue-500 to-violet-600  opacity-80">
           <div className="relative top-20 left-30">
             <Image
-              src={"/contactUs.png"}
+              src={"/contact_us.png"}
               alt="no image"
               height={500}
               width={500}
-              className="z-10 opacity-100"
+              className="z-10 opacity-100 rounded-full shadow-md"
             />
           </div>
         </div>
         <div className="w-2/3 bg-gradient-to-r from-fuchsia-600 to-violet-600 content-center">
           <div>
+            <h1 className="text-center text-white pb-10 text-5xl opacity-80 font-bold">Contact Us</h1>
+
             <div className="max-w-md shadow-md border-t-2 mx-auto content-center p-6 bg-gradient-to-b from-fuchsia-700 to-violet-700 rounded-2xl text-white">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <input
                   type="text"
                   placeholder="Your Name"
                   {...register("name", { required: "Name is required" })}
-                  className="w-full p-3 rounded border-none focus:ring focus:ring-pink-300"
+                  className="w-full text-white p-3 rounded border-none focus:ring focus:ring-pink-300"
                 />
                 {errors.name && (
                   <p className="text-red-600 text-sm">{errors.name.message}</p>
@@ -77,12 +78,20 @@ function Contact() {
 
                 <select
                   {...register("course", { required: "Course is required" })}
-                  className="w-full p-3 rounded border-none focus:ring focus:ring-pink-300"
+                  className="w-full p-3 text-gray-300 rounded border-none focus:ring focus:ring-pink-300"
                 >
-                  <option value="">Select Course/Class</option>
-                  <option value="graphics">Graphics Design</option>
-                  <option value="robotics">Robotics</option>
-                  <option value="ai">AI & Machine Learning</option>
+                  <option value="" className="text-black">
+                    Select Course/Class
+                  </option>
+                  <option value="graphics" className="text-black">
+                    Graphics Design
+                  </option>
+                  <option value="robotics" className="text-black">
+                    Robotics
+                  </option>
+                  <option value="ai" className="text-black">
+                    AI & Machine Learning
+                  </option>
                 </select>
                 {errors.course && (
                   <p className="text-red-600 text-sm">
@@ -114,13 +123,15 @@ function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full backdrop-blur-2xl shadow-md text-white py-3 rounded"
+                  className="w-full backdrop-blur-2xl bg-gradient-to-r from-fuchsia-700 to-violet-700 shadow-md text-white py-3 rounded"
                   disabled={loading}
                 >
                   {loading ? "Sending..." : "SEND"}
                 </button>
 
-                {message && <p className="text-slate-800 text-center">{message}</p>}
+                {message && (
+                  <p className="text-slate-800 text-center">{message}</p>
+                )}
               </form>
             </div>
           </div>

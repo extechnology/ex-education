@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 
 const courseDetails = [
@@ -136,17 +135,17 @@ const courseDetails = [
 function FeaturedCourse2() {
   return (
     <div>
-      <div className="max-w-6xl mx-auto space-y-5 pb-20 md:px-10 lg:px-0">
-        <h1 className="font-bold text-3xl text-center md:text-start  pb-3">
+      <div className="max-w-6xl mx-auto space-y-5 pb-10 md:px-10 lg:px-0">
+        <h1 className="font-bold text-4xl text-center md:text-start  pb-3">
           Our <span className="text-fuchsia-700">Featured</span> Courses
         </h1>
         {
           courseDetails.map((course,index) => (
-            <div key={index} className="md:flex gap-5">
+            <div key={index} className="md:flex gap-5 space-y-6" data-aos="fade-up">
               <div className="w-1/3">
-                <Image src={course.image} alt="no image" height={400} width={400}/>
+                <Image src={course.image} alt="no image" height={400} width={400} className="rounded-lg"/>
               </div>
-              <div className="w-2/3">
+              <div className="w-2/3 content-center">
                 <h1 className="font-bold text-4xl text-fuchsia-700">{course.title}</h1>
                 <h2 className="font-bold text-2xl text-slate-600 py-4">{course.sub_title}</h2>
                 <p className="text-slate-600 text-xl">{course.description}</p>

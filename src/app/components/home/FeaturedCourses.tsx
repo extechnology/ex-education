@@ -5,9 +5,8 @@ import Link from "next/link";
 const courseDetails = [
   {
     id: 1,
-    title: "Digital Marketing",
-    description:
-      "AI and graphic design blend creativity and technology to craft data-driven campaigns with stunning visuals that enhance engagement and brand impact..",
+    title: "AI Advanced Digital Marketing ",
+    description: "3 Months Course + Internship",
     image:
       "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     color: "bg-fuchsia-600",
@@ -15,8 +14,8 @@ const courseDetails = [
   {
     id: 2,
     title: "Graphic Design",
-    description:
-      "Our graphic design courses merge creativity with advanced tools, equipping you with visual storytelling, branding, and industry-ready skills..",
+    description: "3 Months Course + Internship",
+
     image:
       "https://img.freepik.com/free-psd/graphic-designer-top-view-mockup-with-laptop_23-2147675736.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     color: "bg-sky-400",
@@ -24,12 +23,42 @@ const courseDetails = [
   {
     id: 3,
     title: "Robotics",
-    description:
-      "Our robotics learning provides hands-on training in automation, AI, and advanced technology, preparing you to innovate and lead in smart systems.",
+    description: "1 Month Course , Robotics Level 1",
+
     image:
       "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
 
     color: "bg-orange-600",
+  },
+  {
+    id: 4,
+    title: "Web & App. Development",
+    description: "3 Months Course + Internship",
+
+    image:
+      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+
+    color: "bg-teal-600",
+  },
+  {
+    id: 5,
+    title: "UI/UX DESIGNING ",
+    description: "3 Months Course + Internship",
+
+    image:
+      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+
+    color: "bg-violet-600",
+  },
+  {
+    id: 6,
+    title: "VIDEO EDITING ",
+    description: "3 Months Course + Internship",
+
+    image:
+      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+
+    color: "bg-green-600",
   },
 ];
 
@@ -71,7 +100,7 @@ const FeaturedCourses: React.FC = () => {
                   href="/course"
                   className="text-gray-800 hover:underline font-medium  rounded-full"
                 >
-                  <button className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-2">Learn More</button>
+                  <button className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-2 hover:scale-105  transition-all duration-300">Join Now</button>
                 </Link>
               </div>
             </div>
