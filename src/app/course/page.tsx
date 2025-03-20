@@ -1,4 +1,3 @@
-import CourseDetails from "../components/course/CourseDetails";
 import FeaturedCourses from "../components/home/FeaturedCourses";
 
 

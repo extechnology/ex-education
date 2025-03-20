@@ -1,5 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player/youtube";
+import Image from "next/image"; 
 
 interface YouTubeCardProps {
   videoId: string;
@@ -32,7 +33,7 @@ const YouTubeCard: React.FC<YouTubeCardProps> = ({
         />
       ) : (
         <div className="relative cursor-pointer" onClick={handlePlay}>
-          <img
+          <Image
             src={thumbnail}
             alt="Video Thumbnail"
             className="w-full h-auto"

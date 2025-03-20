@@ -41,6 +41,7 @@ export default function EnrollForm() {
       setMessage("Enrollment successful!");
       reset();
     } catch (error) {
+      console.error("Form submission error:", error); // ✅ Logs the error
       setMessage("Error submitting form. Try again.");
     }
   };
@@ -113,7 +114,7 @@ export default function EnrollForm() {
           </form>
         </div>
         <div>
-          <Image src="" alt="no image" width={500} height={500} />
+          <Image src="/form.png" alt="no image" width={500} height={500} />
         </div>
       </div>
     </div>
