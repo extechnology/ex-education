@@ -8,18 +8,19 @@ function Whyexedu() {
           <h1 className="text-4xl font-bold text-fuchsia-700 py-4">
             Why Choose exedu
           </h1>
-          <p className="text-lg pt-3">
-            exedu is a pioneering Hybrid AI Education institute that blends
-            advanced technology with innovative learning methodologies. Offering
-            specialized courses in Digital Marketing with Graphics Design &
-            Prompt AI, Graphics Design, and Robotics, exedu equips students with
-            the skills to thrive in a rapidly evolving digital landscape. By
-            integrating AI-driven tools and hands-on training, the institute
-            ensures a comprehensive learning experience that bridges theory and
-            practice. Whether you&apos;re aspiring to master creative design,
-            leverage AI in marketing, or delve into robotics, We provide a
-            dynamic, future-focused education tailored to meet the demands of
-            modern industries and business{" "}
+          <p className="text-lg pt-3 text-justify">
+            exedu is a leading Hybrid AI Education institute, merging advanced
+            technology with innovative learning. Offering courses in Digital
+            Marketing with Graphics Design & Prompt AI, Graphics Design,
+            Robotics, Web & Mobile Applications & UX-UI Design, exedu prepares
+            students for the digital future. With AI-driven tools and hands-on
+            training, the institute bridges theory and practice, delivering a
+            dynamic, industry-aligned education. Whether mastering design, AI in
+            marketing, or robotics, exedu provides future-focused skills to meet
+            modern industry demands. We are executing all the learning and
+            interaction sessions with Highly Professional and Talented Faculty
+            and Mentors, also provide an Internship program with Live and Client
+            Delivering Projects.
           </p>
         </div>
         <div className="w-1/3">

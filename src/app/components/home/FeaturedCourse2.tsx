@@ -3,7 +3,7 @@ import Image from "next/image";
 const courseDetails = [
   {
     id: 1,
-    title: "Digital Marketing",
+    title: "AI Advanced Digital Marketing ",
     sub_title: "exedu for Hybrid AI Digital Marketing",
     description:
       "Kerala’s premier academy, offering an advanced, Hybrid AI  3-month digital marketing course! Tailor your learning experience with Digital Marketing Offline Classes at our institutes in Calicut.Our comprehensive digital marketing program is designed to provide expert-led, hands-on training for professional competency. . It ensures 100% practical exposure to equip you with real-world skills.",
@@ -90,7 +90,133 @@ const courseDetails = [
   },
   {
     id: 3,
-    title: "Jr.Robotics",
+    title: "Robotics",
+    sub_title: "exedu for Hybrid AI Digital Marketing",
+    description:
+      "Unlock your child’s potential with ExEdu’s Robotics Courses, designed to inspire young minds and foster innovation! Our program introduces kids to the exciting world of robotics through hands-on learning, interactive projects, and cutting-edge technology. With expert-led sessions, children gain a strong foundation in STEM (Science, Technology, Engineering, and Mathematics) while developing critical thinking, problem-solving, and creativity.",
+    image:
+      "https://img.freepik.com/free-vector/artificial-intelligence-isometric-flowchart_1284-23752.jpg?t=st=1742275388~exp=1742278988~hmac=7262363ef5d1c59d07eb3a73c3057bd0998c9e6db3fe11c415377b68860e632e&w=826",
+
+    features: [
+      {
+        title: "Live Industry Expert Faculties",
+        description:
+          "Learn from seasoned professionals with real-world experience.",
+      },
+      {
+        title: "100% Placement Assistance",
+        description: "Get support to land your dream job in digital marketing.",
+      },
+      {
+        title: "Soft-Skill Training, Communication & Interview Preparation",
+        description: "Master the skills needed to excel in the workplace.",
+      },
+      {
+        title: "Latest Industry Innovations",
+        description:
+          "Stay ahead with up-to-date knowledge of trends and tools.",
+      },
+      {
+        title: "Live Projects & Campaign Management",
+        description: "Work on real campaigns to build your portfolio.",
+      },
+      {
+        title: "Real-Time SEO Experience",
+        description: "Learn the art of optimizing and ranking websites.",
+      },
+      {
+        title: "Brand Collaborations",
+        description: "Engage with real brands for hands-on experience.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Web & App. DevelopmentRobotics",
+    sub_title: "exedu for Hybrid AI Digital Marketing",
+    description:
+      "Unlock your child’s potential with ExEdu’s Robotics Courses, designed to inspire young minds and foster innovation! Our program introduces kids to the exciting world of robotics through hands-on learning, interactive projects, and cutting-edge technology. With expert-led sessions, children gain a strong foundation in STEM (Science, Technology, Engineering, and Mathematics) while developing critical thinking, problem-solving, and creativity.",
+    image:
+      "https://img.freepik.com/free-vector/artificial-intelligence-isometric-flowchart_1284-23752.jpg?t=st=1742275388~exp=1742278988~hmac=7262363ef5d1c59d07eb3a73c3057bd0998c9e6db3fe11c415377b68860e632e&w=826",
+
+    features: [
+      {
+        title: "Live Industry Expert Faculties",
+        description:
+          "Learn from seasoned professionals with real-world experience.",
+      },
+      {
+        title: "100% Placement Assistance",
+        description: "Get support to land your dream job in digital marketing.",
+      },
+      {
+        title: "Soft-Skill Training, Communication & Interview Preparation",
+        description: "Master the skills needed to excel in the workplace.",
+      },
+      {
+        title: "Latest Industry Innovations",
+        description:
+          "Stay ahead with up-to-date knowledge of trends and tools.",
+      },
+      {
+        title: "Live Projects & Campaign Management",
+        description: "Work on real campaigns to build your portfolio.",
+      },
+      {
+        title: "Real-Time SEO Experience",
+        description: "Learn the art of optimizing and ranking websites.",
+      },
+      {
+        title: "Brand Collaborations",
+        description: "Engage with real brands for hands-on experience.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "UI/UX Designing",
+    sub_title: "exedu for Hybrid AI Digital Marketing",
+    description:
+      "Unlock your child’s potential with ExEdu’s Robotics Courses, designed to inspire young minds and foster innovation! Our program introduces kids to the exciting world of robotics through hands-on learning, interactive projects, and cutting-edge technology. With expert-led sessions, children gain a strong foundation in STEM (Science, Technology, Engineering, and Mathematics) while developing critical thinking, problem-solving, and creativity.",
+    image:
+      "https://img.freepik.com/free-vector/artificial-intelligence-isometric-flowchart_1284-23752.jpg?t=st=1742275388~exp=1742278988~hmac=7262363ef5d1c59d07eb3a73c3057bd0998c9e6db3fe11c415377b68860e632e&w=826",
+
+    features: [
+      {
+        title: "Live Industry Expert Faculties",
+        description:
+          "Learn from seasoned professionals with real-world experience.",
+      },
+      {
+        title: "100% Placement Assistance",
+        description: "Get support to land your dream job in digital marketing.",
+      },
+      {
+        title: "Soft-Skill Training, Communication & Interview Preparation",
+        description: "Master the skills needed to excel in the workplace.",
+      },
+      {
+        title: "Latest Industry Innovations",
+        description:
+          "Stay ahead with up-to-date knowledge of trends and tools.",
+      },
+      {
+        title: "Live Projects & Campaign Management",
+        description: "Work on real campaigns to build your portfolio.",
+      },
+      {
+        title: "Real-Time SEO Experience",
+        description: "Learn the art of optimizing and ranking websites.",
+      },
+      {
+        title: "Brand Collaborations",
+        description: "Engage with real brands for hands-on experience.",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Video Editing",
     sub_title: "exedu for Hybrid AI Digital Marketing",
     description:
       "Unlock your child’s potential with ExEdu’s Robotics Courses, designed to inspire young minds and foster innovation! Our program introduces kids to the exciting world of robotics through hands-on learning, interactive projects, and cutting-edge technology. With expert-led sessions, children gain a strong foundation in STEM (Science, Technology, Engineering, and Mathematics) while developing critical thinking, problem-solving, and creativity.",
@@ -137,7 +263,7 @@ function FeaturedCourse2() {
     <div>
       <div className="max-w-6xl mx-auto space-y-5 pb-10 md:px-10 lg:px-0">
         <h1 className="font-bold text-4xl text-center md:text-start  pb-3">
-          Our <span className="text-fuchsia-700">Featured</span> Courses
+          Our <span className="text-fuchsia-700">Advanced</span> Courses
         </h1>
         {
           courseDetails.map((course,index) => (
@@ -148,7 +274,7 @@ function FeaturedCourse2() {
               <div className="w-2/3 content-center">
                 <h1 className="font-bold text-4xl text-fuchsia-700">{course.title}</h1>
                 <h2 className="font-bold text-2xl text-slate-600 py-4">{course.sub_title}</h2>
-                <p className="text-slate-600 text-xl">{course.description}</p>
+                <p className="text-slate-600 text-xl text-justify">{course.description}</p>
               </div>
             </div>
           ))

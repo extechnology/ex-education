@@ -3,6 +3,7 @@ import Whyexedu from "../components/about/Whyexedu";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import Mission from "../components/about/Mission";
+import ConfirmCareer from "../components/about/ConfirmCareer";
 
 function About() {
   return (
@@ -48,6 +49,9 @@ function About() {
       </div>
       <div>
         <Mission/>
+      </div>
+      <div>
+        <ConfirmCareer/>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
         <div>
           <h1 className="font-bold text-3xl">Contact</h1>
           <ul className="space-y-2 pt-4">
-            <li>ExEdu</li>
+            <li>exedu</li>
             <li>An initiative of extechnology </li>
             <li>Ramanattukara, Kozhikode</li>
             <li>Kerala 673633 , India</li>

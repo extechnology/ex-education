@@ -93,14 +93,18 @@ const FeaturedCourses: React.FC = () => {
                 </div>
               </div>
               <div className="space-y-3 px-6 pb-6 ">
-                <h2 className="font-semibold text-xl text-violet-600">{course.title}</h2>
+                <h2 className="font-semibold text-xl text-violet-600">
+                  {course.title}
+                </h2>
                 <p className="pb-5">{course.description}</p>
-                
+
                 <Link
-                  href="/course"
+                  href={`/course/${course.id}`}
                   className="text-gray-800 hover:underline font-medium  rounded-full"
                 >
-                  <button className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-2 hover:scale-105  transition-all duration-300">Join Now</button>
+                  <button className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-2 hover:scale-105  transition-all duration-300">
+                    Join Now
+                  </button>
                 </Link>
               </div>
             </div>

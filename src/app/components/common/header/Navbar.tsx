@@ -11,7 +11,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Courses ", href: "/course" },
   { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Admission", href: "/contact" },
 ];
 const menuVariants = {
   hidden: { y: "-100%", opacity: 0 },
@@ -66,30 +66,31 @@ const Navbar: React.FC = () => {
             height={200}
           />
         </Link>
+        <div className="flex items-center gap-10">
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex space-x-6">
+            {navItems.map(({ label, href }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  prefetch={true}
+                  className={`px-3 py-2 rounded-md transition text-lg font-medium text-slate-500 ${
+                    pathname === href ? "bg-transparent " : "bg-transparent"
+                  }`}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6">
-          {navItems.map(({ label, href }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                prefetch={true}
-                className={`px-3 py-2 rounded-md transition text-lg font-medium text-slate-500 ${
-                  pathname === href ? "bg-transparent " : "bg-transparent"
-                }`}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        {/* User Profile */}
-        <div className="hidden md:flex items-center space-x-4">
-          <button className="flex items-center gap-2 text-lg font-medium text-slate-500">
-            <User size={20} />
-            Profile
-          </button>
+          {/* User Profile */}
+          <div className="hidden md:flex items-center space-x-4">
+            <button className="flex items-center gap-2 text-lg font-medium text-slate-600">
+              <User size={20} />
+              Profile
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}

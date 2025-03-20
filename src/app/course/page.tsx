@@ -18,18 +18,18 @@ function Page() {
           Build a Professional Career With exedu
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl pt-14 mx-auto text-center pb-10 gap-10">
-          <div className="p-5 shadow-2xl border-t-2 border-white rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-slate-100">
-            <h1 className="text-xl font-semibold pb-3">
+          <div className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 backdrop-blur-2xl text-slate-100">
+            <h1 className="text-xl font-semibold">
               Advertisements & Promotions
             </h1>
           </div>
-          <div className="p-5 shadow-2xl border-t-2 border-white rounded-xl bg-blue-600 text-slate-100">
-            <h1 className="text-xl font-semibold pb-3">
+          <div className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100">
+            <h1 className="text-xl font-semibold">
               Grow & Up Skill Your <br /> Creative Skill
             </h1>
           </div>
-          <div className="p-5 shadow-2xl border-t-2 border-white rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-slate-100">
-            <h1 className="text-xl font-semibold pb-3">
+          <div className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100">
+            <h1 className="text-xl font-semibold">
               Develop Web & Application
             </h1>
           </div>
@@ -37,9 +37,6 @@ function Page() {
       </div>
       <div>
         <FeaturedCourses />
-      </div>
-      <div>
-        <CourseDetails />
       </div>
     </div>
   );
