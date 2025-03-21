@@ -47,9 +47,9 @@ export default function EnrollForm() {
   };
 
   return (
-    <div className=" items-center justify-center  bg-[url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52393.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid')] bg-no-repeat bg-cover px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 pt-32 pb-10">
-        <div className="bg-transparent backdrop-blur-2xl shadow-lg rounded-2xl p-6 sm:p-8 w-full max-w-md">
+    <div className=" items-center justify-center  bg-[url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52393.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid')] bg-no-repeat bg-cover ">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 pt-32 pb-10 px-5 md:px-0">
+        <div className="bg-blue-800 backdrop-blur-2xl shadow-lg rounded-2xl p-6 sm:p-8 w-full max-w-md h-90 my-auto">
           {message && (
             <div
               className={`text-center p-2 text-sm rounded mb-3 ${
@@ -62,7 +62,7 @@ export default function EnrollForm() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 ">
             <div>
               <label className="block text-white font-medium">Name</label>
               <input
@@ -107,7 +107,7 @@ export default function EnrollForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-200"
+              className="w-full bg-blue-600 text-white py-2 mt-3 rounded-lg hover:bg-blue-700 transition duration-200"
             >
               {isSubmitting ? "Submitting..." : "Enroll Now"}
             </button>

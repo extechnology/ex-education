@@ -22,9 +22,9 @@ export default async function CourseDetail({
   return (
     <div>
       <Form />
-      <section className="relative flex flex-col md:flex-row items-center px-8 md:px-16 py-12 bg-white">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-pink-500 w-1/3 left-0 z-0"></div>
-        <div className="flex max-w-7xl mx-auto">
+      <section className="relative grid grid-rows-1 md:flex-row items-center px-8 md:px-16 py-12 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-r hidden md:block from-orange-500 to-pink-500 w-1/3 left-0 z-0"></div>
+        <div className="md:flex max-w-7xl mx-auto">
           {/* ✅ Image Section */}
           <div className="relative z-10 w-full md:w-1/2 flex justify-center md:justify-start">
             <div className="bg-white shadow-lg rounded-lg">
@@ -42,7 +42,7 @@ export default async function CourseDetail({
           </div>
           {/* ✅ Text Content */}
           <div className="relative z-10 w-full md:w-1/2 text-left md:pl-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-pink-600 uppercase leading-tight">
+            <h2 className="text-3xl pt-5 md:pt-0 md:text-4xl font-bold text-pink-600 uppercase leading-tight">
               {course.title}
             </h2>
             <p className="mt-4 text-gray-700 text-lg text-justify">
@@ -53,13 +53,16 @@ export default async function CourseDetail({
       </section>
 
       {/* ✅ Course Subtitle */}
-      <div className="max-w-7xl mx-auto mt-5">
+      <div className="max-w-7xl mx-auto md:mt-5">
         <h1 className="text-4xl font-bold text-white text-center p-5 bg-gradient-to-r from-violet-500 to-fuchsia-500">
           {course.sub_title}
         </h1>
-        <p className="pt-5 text-gray-700 text-lg text-justify w-[80%] mx-auto">
-          {course.content}
-        </p>
+        <div className="md:flex gap-5 px-5">
+          <Image src={course.image3} alt="no image" className="rounded-lg py-3 " height={400} width={400} />
+          <p className="pt-5 text-gray-700 text-lg text-justify w-[80%] mx-auto">
+            {course.content}
+          </p>
+        </div>
       </div>
 
       {/* ✅ What You'll Learn */}
@@ -67,20 +70,23 @@ export default async function CourseDetail({
         <h3 className="text-4xl font-bold text-white text-center p-5 bg-gradient-to-r from-violet-500 to-fuchsia-500">
           What You&apos;ll Learn:
         </h3>
-        <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto py-5">
-          {course.pros?.[0] &&
-            Object.entries(course.pros[0]).map(([key, skills]) =>
-              Array.isArray(skills)
-                ? skills.map((skill: string) => (
-                    <li key={`${key}-${skill}`} className="text-gray-700">
-                      {skill}
-                    </li>
-                  ))
-                : null
-            )}
-        </ul>
+        <div className="md:flex">
+          <Image src={course.image3} alt="no image" height={400} width={400} />
+
+          <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto py-5">
+            {course.pros?.[0] &&
+              Object.entries(course.pros[0]).map(([key, skills]) =>
+                Array.isArray(skills)
+                  ? skills.map((skill: string) => (
+                      <li key={`${key}-${skill}`} className="text-gray-700">
+                        {skill}
+                      </li>
+                    ))
+                  : null
+              )}
+          </ul>
+        </div>
       </div>
     </div>
   );
 }
-

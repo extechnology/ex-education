@@ -37,6 +37,9 @@ const YouTubeCard: React.FC<YouTubeCardProps> = ({
             src={thumbnail}
             alt="Video Thumbnail"
             className="w-full h-auto"
+            layout="responsive"
+            width={16}
+            height={9}
           />
           {/* Play Button Overlay */}
           <div className="absolute inset-0 flex items-center justify-center">

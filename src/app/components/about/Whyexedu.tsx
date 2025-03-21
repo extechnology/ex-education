@@ -2,9 +2,9 @@ import Image from "next/image";
 
 function Whyexedu() {
   return (
-    <div className="bg-[#F4F7FB] h-[55vh]">
-      <div className="max-w-7xl mx-auto py-10 md:flex">
-        <div className="w-2/3">
+    <div className="bg-[#F4F7FB] ">
+      <div className="max-w-7xl mx-auto pt-10 md:flex">
+        <div className="md:w-2/3 px-5 md:px-0">
           <h1 className="text-4xl font-bold text-fuchsia-700 py-4">
             Why Choose exedu
           </h1>
@@ -23,7 +23,7 @@ function Whyexedu() {
             Delivering Projects.
           </p>
         </div>
-        <div className="w-1/3">
+        <div className="md:w-1/3">
           <Image src="/why_us.png" alt="" width={500} height={500} />
         </div>
       </div>

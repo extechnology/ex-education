@@ -267,12 +267,12 @@ function FeaturedCourse2() {
         </h1>
         {
           courseDetails.map((course,index) => (
-            <div key={index} className="md:flex gap-5 space-y-6" data-aos="fade-up">
-              <div className="w-1/3">
+            <div key={index} className="md:flex gap-5 space-y-6 px-5 md:px-0" data-aos="fade-up">
+              <div className="md:w-1/3">
                 <Image src={course.image} alt="no image" height={400} width={400} className="rounded-lg"/>
               </div>
-              <div className="w-2/3 content-center">
-                <h1 className="font-bold text-4xl text-fuchsia-700">{course.title}</h1>
+              <div className="md:w-2/3 content-center">
+                <h1 className="font-bold text-2xl md:text-4xl text-fuchsia-700">{course.title}</h1>
                 <h2 className="font-bold text-2xl text-slate-600 py-4">{course.sub_title}</h2>
                 <p className="text-slate-600 text-xl text-justify">{course.description}</p>
               </div>

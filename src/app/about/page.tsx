@@ -10,7 +10,7 @@ function About() {
     <div>
       <div className="bg-[#F4F7FB] pt-36 pb-24  bg-[url('https://img.freepik.com/free-vector/gradient-colorful-grainy-dynamic-background_52683-101908.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid')] bg-no-repeat bg-cover">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 justify-center content-center text-white">
-          <div className="content-end relative md:top-10">
+          <div className="content-end relative md:top-10 px-5">
             <div>
               <h1 className="content-center text-6xl font-bold">ABOUT US</h1>
             </div>
@@ -25,11 +25,11 @@ function About() {
                 Innovating marketing education for tomorrow.{" "}
               </p>
             </div>
-            <div className="pt-5">
-              <Link href="/">
-                <button className="flex items-center justify-center gap-2 w-2/3 text-gray-700 font-semibold bg-gray-100 text-md rounded-lg shadow-lg py-4 hover:scale-110 transition-all duration-300">
-                  <MessageCircle className="w-5 h-5 text-green-500" />
-                  Chat with the Course Counselor now!
+            <div className="pt-5 w-full">
+              <Link href="/" className="w-full">
+                <button className="flex items-center justify-center md:gap-2 md:w-2/3 text-gray-700 font-semibold bg-gray-100 text-md rounded-lg shadow-lg py-4 px-2 hover:scale-110 transition-all duration-300">
+                  <MessageCircle className="md:w-5 w-20 md:h-5 text-green-500" />
+                  <p className="text-sm-center">Chat with the Course Counselor now!</p>
                 </button>
               </Link>
             </div>
@@ -48,10 +48,10 @@ function About() {
         <Whyexedu />
       </div>
       <div>
-        <Mission/>
+        <Mission />
       </div>
       <div>
-        <ConfirmCareer/>
+        <ConfirmCareer />
       </div>
     </div>
   );

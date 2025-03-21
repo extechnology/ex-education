@@ -3,8 +3,8 @@ import Image from "next/image";
 function Mission() {
   return (
     <div className="bg-teal-600 ">
-      <div className="max-w-6xl mx-auto md:flex content-center py-15 gap-10">
-        <div className="w-1/3">
+      <div className="max-w-6xl mx-auto md:flex content-center py-15 gap-10 px-5 md:px-0">
+        <div className="md:w-1/3 pb-10 md:pb-0">
           <Image
             src="/mission.png"
             alt="no image"
@@ -13,9 +13,9 @@ function Mission() {
             className="rounded-md"
           />
         </div>
-        <div className="w-2/3 content-center">
+        <div className="md:w-2/3 content-center">
           <h1 className="text-4xl font-bold text-white">OUR MISSION</h1>
-          <p className="w-[90%] text-white text-lg text-justify py-5">
+          <p className="md:w-[90%] text-white text-lg text-justify py-5">
             exedu’s mission is to empower learners with cutting-edge skills and
             knowledge through innovative, hybrid AI-driven education. We aim to
             bridge the gap between traditional learning and modern industry
