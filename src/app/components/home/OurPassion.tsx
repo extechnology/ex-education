@@ -30,10 +30,10 @@ const AboutUs: React.FC = () => {
               Our Passion
             </span>
           </p>
-          <h1 className="font-bold text-4xl w-[90%]">
+          <h1 className="font-bold md:text-4xl text-2xl w-[90%]">
             Transform Your Passion into Profession, Join With Us
           </h1>
-          <p className="w-[90%] text-xl text-justify">
+          <p className="w-[90%] md:text-xl text-lg text-justify">
             Unlock Your Future with exedu! Master Digital Marketing, Graphics
             Design, Prompt AI, and Robotics. Transform Your Skills, Embrace
             Innovation, and Lead the Tech Revolution. Enroll Today and Shape

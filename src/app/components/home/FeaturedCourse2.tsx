@@ -132,7 +132,7 @@ const courseDetails = [
   },
   {
     id: 4,
-    title: "Web & App. DevelopmentRobotics",
+    title: "Web & App. Development",
     sub_title: "exedu for Hybrid AI Digital Marketing",
     description:
       "Unlock your child’s potential with ExEdu’s Robotics Courses, designed to inspire young minds and foster innovation! Our program introduces kids to the exciting world of robotics through hands-on learning, interactive projects, and cutting-edge technology. With expert-led sessions, children gain a strong foundation in STEM (Science, Technology, Engineering, and Mathematics) while developing critical thinking, problem-solving, and creativity.",
@@ -262,23 +262,40 @@ function FeaturedCourse2() {
   return (
     <div>
       <div className="max-w-6xl mx-auto space-y-5 pb-10 md:px-10 lg:px-0">
-        <h1 className="font-bold text-4xl text-center md:text-start  pb-3">
+        <h1 className="font-bold md:text-4xl text-3xl px-5 text-center md:text-start  pb-3">
           Our <span className="text-fuchsia-700">Advanced</span> Courses
         </h1>
-        {
-          courseDetails.map((course,index) => (
-            <div key={index} className="md:flex gap-5 space-y-6 px-5 md:px-0" data-aos="fade-up">
-              <div className="md:w-1/3">
-                <Image src={course.image} alt="no image" height={400} width={400} className="rounded-lg"/>
-              </div>
-              <div className="md:w-2/3 content-center">
-                <h1 className="font-bold text-2xl md:text-4xl text-fuchsia-700">{course.title}</h1>
-                <h2 className="font-bold text-2xl text-slate-600 py-4">{course.sub_title}</h2>
-                <p className="text-slate-600 text-xl text-justify">{course.description}</p>
-              </div>
+        {courseDetails.map((course, index) => (
+          <div
+            key={index}
+            className="md:flex gap-5 space-y-6 px-5 md:px-0"
+            data-aos="fade-up"
+          >
+            <div className="md:w-1/3">
+              <Image
+                src={course.image}
+                alt="no image"
+                height={400}
+                width={400}
+                className="rounded-lg"
+              />
             </div>
-          ))
-        }
+            <div className="md:w-2/3 content-center">
+              <h1 className="font-bold text-2xl md:text-4xl text-fuchsia-700">
+                <span className="inline-flex bg-gray-200 px-3 py-2 rounded-lg md:bg-transparent md:p-0">
+                  {course.title}
+                </span>
+              </h1>
+
+              <h2 className="md:font-bold text-2xl text-slate-700 py-4">
+                {course.sub_title}
+              </h2>
+              <p className="text-slate-600 md:text-xl text-lg text-justify">
+                {course.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

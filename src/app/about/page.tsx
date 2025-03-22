@@ -15,21 +15,21 @@ function About() {
               <h1 className="content-center text-6xl font-bold">ABOUT US</h1>
             </div>
             <div className="pt-4">
-              <h2 className="text-3xl font-semibold text-yellow-300">
+              <h2 className="text-2xl md:text-3xl font-semibold text-yellow-300">
                 A leading Hybrid AI Institute in Kerala
               </h2>
               <p className="pt-5 text-xl">
-                Blending AI and creativity seamlessly &{" "}
-              </p>
-              <p className="text-xl">
-                Innovating marketing education for tomorrow.{" "}
+                Blending AI and creativity seamlessly & Innovating marketing
+                education for tomorrow.{" "}
               </p>
             </div>
-            <div className="pt-5 w-full">
-              <Link href="/" className="w-full">
-                <button className="flex items-center justify-center md:gap-2 md:w-2/3 text-gray-700 font-semibold bg-gray-100 text-md rounded-lg shadow-lg py-4 px-2 hover:scale-110 transition-all duration-300">
-                  <MessageCircle className="md:w-5 w-20 md:h-5 text-green-500" />
-                  <p className="text-sm-center">Chat with the Course Counselor now!</p>
+            <div className="pt-5 relative top-10 w-full flex justify-start md:justify-normal">
+              <Link href="/" className="w-full md:w-2/3">
+                <button className="flex items-center justify-center gap-3 md:gap-2 text-gray-700 font-semibold bg-gray-100 text-md rounded-lg shadow-lg py-4  hover:scale-105 transition-all duration-300 w-full">
+                  <MessageCircle className="w-6 h-6 md:w-5 md:h-5 text-green-500" />
+                  <p className="text-sm md:text-base">
+                    Chat with the Course Counselor now!
+                  </p>
                 </button>
               </Link>
             </div>

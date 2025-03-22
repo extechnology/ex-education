@@ -64,6 +64,7 @@ const Navbar: React.FC = () => {
             alt="logo"
             width={200}
             height={200}
+            className="pl-5 md:pl-0"
           />
         </Link>
         <div className="flex items-center gap-10">

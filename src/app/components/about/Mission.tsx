@@ -10,11 +10,11 @@ function Mission() {
             alt="no image"
             width={400}
             height={400}
-            className="rounded-md"
+            className="rounded-md w-[75%] mx-auto md:w-full"
           />
         </div>
-        <div className="md:w-2/3 content-center">
-          <h1 className="text-4xl font-bold text-white">OUR MISSION</h1>
+        <div className="md:w-2/3 content-center pt-2 md:pt-0">
+          <h1 className="md:text-4xl text-3xl font-bold text-white">OUR MISSION</h1>
           <p className="md:w-[90%] text-white text-lg text-justify py-5">
             exedu’s mission is to empower learners with cutting-edge skills and
             knowledge through innovative, hybrid AI-driven education. We aim to
