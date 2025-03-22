@@ -1,6 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player/youtube";
-import Image from "next/image"; 
+import Image from "next/image";
 
 interface YouTubeCardProps {
   videoId: string;
@@ -24,13 +24,17 @@ const YouTubeCard: React.FC<YouTubeCardProps> = ({
   return (
     <div className="relative w-full overflow-hidden shadow-lg">
       {isPlaying ? (
-        <ReactPlayer
-          url={videoUrl}
-          playing={true}
-          controls={true}
-          width="100%"
-          height="100%"
-        />
+        <div className="video-wrapper">
+          {" "}
+          {/* Add this wrapper */}
+          <ReactPlayer
+            url={videoUrl}
+            playing={true}
+            controls={true}
+            width="100%"
+            height="100%"
+          />
+        </div>
       ) : (
         <div className="relative cursor-pointer" onClick={handlePlay}>
           <Image
