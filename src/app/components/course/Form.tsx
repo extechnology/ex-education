@@ -10,8 +10,13 @@ interface FormData {
   title: string;
 }
 
+interface PropsData {
+ id:number;
+ title: string;
+}
+
 interface FormProps {
-  course: FormData;
+  course: PropsData;
 }
 
 export default function Form({ course }: FormProps) {
@@ -60,6 +65,7 @@ export default function Form({ course }: FormProps) {
         setError("Failed to submit form. Please try again.");
       }
     } catch (error) {
+      console.error("Error submitting form:", error);
       setError("An error occurred. Please check your connection.");
     }
   };

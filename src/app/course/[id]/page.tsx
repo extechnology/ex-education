@@ -19,22 +19,30 @@ export default async function CourseDetail({
 
   return (
     <div>
-      <Form course={course} />
+      {course && (
+        <Form
+          course={{
+            id: course.id,
+            title: course.title || "",
+          }}
+        />
+      )}
       <section className="relative grid grid-rows-1 md:flex-row items-center px-8 md:px-16 py-12 bg-white">
         <div className="absolute inset-0 bg-gradient-to-r hidden md:block from-orange-500 to-pink-500 w-1/3 left-0 z-0"></div>
         <div className="md:flex max-w-7xl mx-auto">
           {/* ✅ Image Section */}
           <div className="relative z-10 w-full md:w-1/2 flex justify-center md:justify-start">
             <div className="bg-white shadow-lg rounded-lg">
-              {course.image && (
+              {course.image ? (
                 <Image
                   src={course.image}
-                  alt={course.title}
+                  alt={course.title || "Course Image"}
                   width={600}
                   height={400}
                   className="rounded-lg"
-                  unoptimized
                 />
+              ) : (
+                <p>No image available</p>
               )}
             </div>
           </div>
@@ -44,7 +52,7 @@ export default async function CourseDetail({
               {course.title}
             </h2>
             <p className="mt-4 text-gray-700 text-lg text-justify">
-              {course.into_para}
+              {course.into_para || "Description not available"}
             </p>
           </div>
         </div>
@@ -56,7 +64,13 @@ export default async function CourseDetail({
           {course.sub_title}
         </h1>
         <div className="md:flex gap-5 md:px-5">
-          <Image src={course.image3} alt="no image" className="rounded-lg md:py-3 " height={400} width={400} />
+          <Image
+            src={course.image3}
+            alt="no image"
+            className="rounded-lg md:py-3 "
+            height={400}
+            width={400}
+          />
           <p className="pt-5 text-gray-700 text-lg text-justify w-[80%] mx-auto">
             {course.content}
           </p>
@@ -69,7 +83,13 @@ export default async function CourseDetail({
           What You&apos;ll Learn:
         </h3>
         <div className="md:flex gap-5 md:p-5">
-          <Image src={course.image3} alt="no image" height={400} width={400} className="md:pl-2" />
+          <Image
+            src={course.image3}
+            alt="no image"
+            height={400}
+            width={400}
+            className="md:pl-2"
+          />
 
           <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto py-5">
             {course.pros?.[0] &&
