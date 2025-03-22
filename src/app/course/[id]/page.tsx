@@ -27,7 +27,7 @@ export default async function CourseDetail({
           }}
         />
       )}
-      <section className="relative grid grid-rows-1 md:flex-row items-center px-8 md:px-16 py-12 bg-white">
+      <section className="relative grid grid-rows-1 md:flex-row items-center px-4 md:px-16 py-12 bg-white">
         <div className="absolute inset-0 bg-gradient-to-r hidden md:block from-orange-500 to-pink-500 w-1/3 left-0 z-0"></div>
         <div className="md:flex max-w-7xl mx-auto">
           {/* ✅ Image Section */}
@@ -71,7 +71,7 @@ export default async function CourseDetail({
             height={400}
             width={400}
           />
-          <p className="pt-5 text-gray-700 text-lg text-justify w-[80%] mx-auto">
+          <p className="pt-5 text-gray-700 text-lg text-justify md:w-[80%] w-[90%] mx-auto">
             {course.content}
           </p>
         </div>
@@ -91,7 +91,7 @@ export default async function CourseDetail({
             className="md:pl-2"
           />
 
-          <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto py-5">
+          <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:w-[80%] w-[90%] mx-auto py-5">
             {course.pros?.[0] &&
               Object.entries(course.pros[0]).map(([key, skills]) =>
                 Array.isArray(skills)
