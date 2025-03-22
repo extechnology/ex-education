@@ -37,7 +37,7 @@ const courseDetails = [
     title: "Web & App Development",
     description: "3 Months Course + Internship",
     image:
-      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg",
+      "https://img.freepik.com/free-vector/creative-web-homepage-illustration_52683-79847.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
     color: "bg-teal-600",
   },
   {
@@ -45,7 +45,7 @@ const courseDetails = [
     title: "UI/UX Designing",
     description: "3 Months Course + Internship",
     image:
-      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg",
+      "https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
     color: "bg-violet-600",
   },
   {
@@ -53,7 +53,7 @@ const courseDetails = [
     title: "Video Editing",
     description: "3 Months Course + Internship",
     image:
-      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg",
+      "https://img.freepik.com/free-vector/broadcasting-live-event-concept_23-2148527129.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
     color: "bg-green-600",
   },
 ];

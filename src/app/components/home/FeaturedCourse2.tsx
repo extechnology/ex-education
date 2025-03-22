@@ -137,7 +137,7 @@ const courseDetails = [
     description:
       "Unlock your child’s potential with ExEdu’s Robotics Courses, designed to inspire young minds and foster innovation! Our program introduces kids to the exciting world of robotics through hands-on learning, interactive projects, and cutting-edge technology. With expert-led sessions, children gain a strong foundation in STEM (Science, Technology, Engineering, and Mathematics) while developing critical thinking, problem-solving, and creativity.",
     image:
-      "https://img.freepik.com/free-vector/artificial-intelligence-isometric-flowchart_1284-23752.jpg?t=st=1742275388~exp=1742278988~hmac=7262363ef5d1c59d07eb3a73c3057bd0998c9e6db3fe11c415377b68860e632e&w=826",
+      "https://img.freepik.com/free-vector/gradient-creative-home-page-illustration_52683-79882.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
 
     features: [
       {
@@ -179,7 +179,7 @@ const courseDetails = [
     description:
       "Unlock your child’s potential with ExEdu’s Robotics Courses, designed to inspire young minds and foster innovation! Our program introduces kids to the exciting world of robotics through hands-on learning, interactive projects, and cutting-edge technology. With expert-led sessions, children gain a strong foundation in STEM (Science, Technology, Engineering, and Mathematics) while developing critical thinking, problem-solving, and creativity.",
     image:
-      "https://img.freepik.com/free-vector/artificial-intelligence-isometric-flowchart_1284-23752.jpg?t=st=1742275388~exp=1742278988~hmac=7262363ef5d1c59d07eb3a73c3057bd0998c9e6db3fe11c415377b68860e632e&w=826",
+      "https://img.freepik.com/premium-vector/realistic-ui-collection-element_23-2151371631.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
 
     features: [
       {
@@ -221,7 +221,7 @@ const courseDetails = [
     description:
       "Unlock your child’s potential with ExEdu’s Robotics Courses, designed to inspire young minds and foster innovation! Our program introduces kids to the exciting world of robotics through hands-on learning, interactive projects, and cutting-edge technology. With expert-led sessions, children gain a strong foundation in STEM (Science, Technology, Engineering, and Mathematics) while developing critical thinking, problem-solving, and creativity.",
     image:
-      "https://img.freepik.com/free-vector/artificial-intelligence-isometric-flowchart_1284-23752.jpg?t=st=1742275388~exp=1742278988~hmac=7262363ef5d1c59d07eb3a73c3057bd0998c9e6db3fe11c415377b68860e632e&w=826",
+      "https://img.freepik.com/free-vector/video-marketing-isometric-concept_1284-10903.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
 
     features: [
       {
