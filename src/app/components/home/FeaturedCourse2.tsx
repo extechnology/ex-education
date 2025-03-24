@@ -290,7 +290,7 @@ function FeaturedCourse2() {
               <h2 className="md:font-bold text-2xl text-slate-700 py-4">
                 {course.sub_title}
               </h2>
-              <p className="text-slate-600 md:text-xl text-lg text-justify">
+              <p className="text-slate-600 md:text-xl text-pretty text-lg text-justify">
                 {course.description}
               </p>
             </div>

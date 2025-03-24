@@ -13,6 +13,7 @@ const navItems = [
   { label: "About Us", href: "/about" },
   { label: "Admission", href: "/contact" },
 ];
+
 const menuVariants = {
   hidden: { y: "-100%", opacity: 0 },
   visible: {
@@ -87,7 +88,7 @@ const Navbar: React.FC = () => {
 
           {/* User Profile */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="flex items-center gap-2 text-lg font-medium text-slate-600">
+            <button className="flex items-center gap-2 text-lg rounded-full border-2 px-3 py-1 shadow border-gray-300 font-medium text-slate-600">
               <User size={20} />
               Profile
             </button>
@@ -130,7 +131,7 @@ const Navbar: React.FC = () => {
             ))}
             <li className="py-5">
               <Link
-                href="/"
+                href="/profile"
                 className="w-full shadow-md rounded-2xl px-3 py-2 bg-gray-100 text-fuchsia-600 border-white block text-center"
               >
                 Profile

@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             <li>Ramanattukara, Kozhikode</li>
             <li>Kerala 673633 , India</li>
             <li>Ph: +91 9072123466</li>
-            <li>Email : info@exedu.in</li>
+            <li>Email : exeduone@gmail.in</li>
           </ul>
         </div>
         <div>
@@ -100,10 +100,10 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex gap-1">
             <div>
-              <Link href={"/"}>Privacy Policy |</Link>
+              <Link href={"/privacy"}>Privacy Policy |</Link>
             </div>
             <div>
-              <Link href={"/"}>Terms & Conditions |</Link>
+              <Link href={"/terms"}>Terms & Conditions |</Link>
             </div>
             <div>
               <Link href={"/"}>Refund Policy</Link>

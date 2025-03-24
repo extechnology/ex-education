@@ -8,7 +8,7 @@ function ConfirmCareer() {
           <h1 className="font-bold md:text-3xl text-2xl text-center md:text-start text-fuchsia-700">
             Confirm your career in the <br /> Digital & Technology Profession.
           </h1>
-          <p className="text-justify md:w-[90%] text-lg px-5 md:px-0">
+          <p className="text-justify md:w-[90%] text-md px-5 md:px-0">
             At exedu, we help you confidently build a career in the digital and
             technology professions. Our specialized courses in Digital
             Marketing, Graphics Design, Prompt AI, and Robotics are designed to

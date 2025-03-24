@@ -9,7 +9,7 @@ import Link from "next/link";
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const popupRef = useRef<HTMLDivElement>(null);
-  const phoneNumber = "1234567890"; // Replace with your WhatsApp number
+  const phoneNumber = "9072123466"; 
   const message = encodeURIComponent("Hello, I'm interested in your products!");
 
   // Close the popup when clicking outside

@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: "ExEdu",
+  title: "exedu",
   description: "Hybrid AI Education",
 };
 

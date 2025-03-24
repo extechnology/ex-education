@@ -60,24 +60,25 @@ const courseDetails = [
 
 const FeaturedCourses: React.FC = () => {
   return (
-    <div className="text-gray-800 max-w-7xl mx-auto space-y-5 py-10 md:py-20 md:px-10 lg:px-0">
+    <div className="text-gray-800 max-w-7xl mx-auto space-y-5 pt-10 md:py-20 md:px-10 lg:px-0">
       {/* Mobile Slider */}
       <div className="md:hidden px-4">
         <Swiper
           modules={[Pagination]}
           spaceBetween={20}
           slidesPerView={1.2}
-          pagination={{ clickable: true }}
+          className="w-full"
+          pagination={false} // Removes pagination dots
         >
           {courseDetails.map((course) => (
             <SwiperSlide key={course.id}>
-              <div className="shadow-md rounded-lg bg-white transform transition-transform duration-500">
+              <div className="shadow-md rounded-lg bg-white transform transition-transform duration-500  overflow-hidden">
                 <Image
                   src={course.image}
                   alt={course.title}
                   width={500}
                   height={500}
-                  className="rounded-t-lg"
+                  className="rounded-t-lg w-full h-auto"
                 />
                 <div
                   className={`relative w-36 bottom-8 left-0 rounded-tr-2xl opacity-90 text-white px-2 py-1 ${course.color}`}
@@ -88,7 +89,7 @@ const FeaturedCourses: React.FC = () => {
                   <h2 className="font-semibold text-xl text-violet-600">
                     {course.title}
                   </h2>
-                  <p className="pb-3">{course.description}</p>
+                  <p className="pb-3 text-md">{course.description}</p>
                   <Link href={`/course/${course.id}`} className="block">
                     <button className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-2 hover:scale-105 transition-all duration-300">
                       Join Now
