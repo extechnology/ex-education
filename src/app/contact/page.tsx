@@ -75,7 +75,7 @@ function Contact() {
               exedu
             </span>
           </h1>
-          <div className="bg-[#F7F3EE] md:border-t-4 md:border-l-4 md:pl-16 md:py-16 rounded p-6 shadow-lg">
+          <div className="bg-[#F7F3EE] md:border-t-2 md:border-l-2 md:pl-16 md:py-16 rounded p-6 shadow-lg">
             <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Left - Form Section */}
               <div>
@@ -151,10 +151,13 @@ function Contact() {
                         Select a course
                       </option>
                       <option value="digital-marketing">
-                        Digital Marketing
+                        AI Advanced Digital Marketing
                       </option>
                       <option value="graphics-design">Graphics Design</option>
                       <option value="robotics">Robotics</option>
+                      <option value="robotics">Web/App Development</option>
+                      <option value="robotics">Video Editing</option>
+                      <option value="robotics">UI/UX Designing</option>
                     </select>
                     {errors.course && (
                       <p className="text-red-500 text-sm">
@@ -182,7 +185,7 @@ function Contact() {
                     Contact
                   </h2>
                   <ul className="pt-1">
-                    <li>Exedu 5VG7+RXJ,</li>
+                    <li>Room No: 20/884,</li>
                     <li>Opposite Bus Stand, </li>
                     <li>Ramanattukara, Kozhikode, </li>
                     <li>Kerala 673633, India</li>
@@ -192,7 +195,11 @@ function Contact() {
                   <h2 className="text-lg font-semibold text-gray-900">
                     Call/WhatsApp
                   </h2>
-                  <p className="text-gray-700">Contact: +91 9072123466</p>
+                  <p className="text-gray-700">+91 9072123466</p>
+                  <h2 className="text-lg font-semibold pt-3 text-gray-900">
+                    Email:
+                  </h2>
+                  <p className="text-gray-700">exeduone@gmail.in </p>
                 </div>
                 {/* Social Icons */}
                 <div className="flex space-x-6 mt-10">

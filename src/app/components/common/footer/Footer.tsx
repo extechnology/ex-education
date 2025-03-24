@@ -34,10 +34,10 @@ const Footer: React.FC = () => {
         <div>
           <h1 className="font-bold md:text-3xl text-2xl">Contact</h1>
           <ul className="space-y-2 pt-4">
-            <li>exedu</li>
-            <li>An initiative of extechnology </li>
+            <li>Room No: 20/884,</li>
+            <li>Opposite Bus Stand,</li>
             <li>Ramanattukara, Kozhikode</li>
-            <li>Kerala 673633 , India</li>
+            <li>Kerala 673633 </li>
             <li>Ph: +91 9072123466</li>
             <li>Email : exeduone@gmail.in</li>
           </ul>
