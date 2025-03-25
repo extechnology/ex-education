@@ -2,14 +2,6 @@
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import {
-  FaInstagram,
-  FaFacebook,
-  FaYoutube,
-  FaPinterest,
-  FaLinkedin,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 
 type FormData = {
   name: string;
@@ -57,16 +49,16 @@ function Contact() {
   };
 
   return (
-    <div className="bg-gray-100">
-      <div className="md:pt-40 pt-32 grid grid-cols-1 md:grid-cols-2 justify-center content-center px-4 md:px-0 pb-5 md:pb-0">
-        <div className="flex justify-center pb-10">
+    <div className="bg-gray-100 pb-20">
+      <div className="md:pt-40 max-w-7xl pt-32 pb-20 mx-auto grid grid-cols-1 md:grid-cols-2 justify-center px-4 md:px-0 md:pb-0">
+        <div className="content-center">
           <Image
             src="https://img.freepik.com/free-photo/3d-rendering-luxury-business-meeting-working-room-executive-office_105762-1993.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost"
             alt="no image"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             className="rounded"
-          />
+          /> 
         </div>
         <div>
           <h1 className="text-center font-bold md:text-5xl text-3xl text-gray-800 pb-5">
@@ -75,7 +67,7 @@ function Contact() {
               exedu
             </span>
           </h1>
-          <div className="bg-[#F7F3EE] md:border-t-2 md:border-l-2 md:pl-16 md:py-16 rounded p-6 shadow-lg">
+          <div className="bg-[#F7F3EE] md:pl-12 md:py-12 rounded p-6 shadow-lg">
             <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Left - Form Section */}
               <div>
@@ -202,14 +194,14 @@ function Contact() {
                   <p className="text-gray-700">exeduone@gmail.in </p>
                 </div>
                 {/* Social Icons */}
-                <div className="flex space-x-6 mt-10">
+                {/* <div className="flex space-x-6 mt-10">
                   <FaFacebook className="text-black text-2xl cursor-pointer hover:opacity-75" />
                   <FaInstagram className="text-black text-2xl cursor-pointer hover:opacity-75" />
                   <FaXTwitter className="text-black text-2xl cursor-pointer hover:opacity-75" />
                   <FaPinterest className="text-black text-2xl cursor-pointer hover:opacity-75" />
                   <FaYoutube className="text-black text-2xl cursor-pointer hover:opacity-75" />
                   <FaLinkedin className="text-black text-2xl cursor-pointer hover:opacity-75" />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

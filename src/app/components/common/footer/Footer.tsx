@@ -103,11 +103,9 @@ const Footer: React.FC = () => {
               <Link href={"/privacy"}>Privacy Policy |</Link>
             </div>
             <div>
-              <Link href={"/terms"}>Terms & Conditions |</Link>
+              <Link href={"/terms"}>Terms & Conditions </Link>
             </div>
-            <div>
-              <Link href={"/"}>Refund Policy</Link>
-            </div>
+            
           </div>
         </div>
       </div>

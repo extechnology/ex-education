@@ -48,6 +48,8 @@ const Navbar: React.FC = () => {
         setShowProfilePopup(false);
       }
     };
+    console.log(user)
+    console.log(pathname)
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
