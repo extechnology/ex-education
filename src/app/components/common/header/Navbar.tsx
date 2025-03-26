@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, User, LogIn, UserPlus, LogOut } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 // Clerk Authentication Hooks
 import {
@@ -29,9 +30,10 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   // Clerk user authentication
-  const { user, isSignedIn } = useUser();
+  const {  isSignedIn } = useUser();
 
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 50);
@@ -48,12 +50,10 @@ const Navbar: React.FC = () => {
         setShowProfilePopup(false);
       }
     };
-    console.log(user)
-    console.log(pathname)
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [pathname]);
 
   return (
     <nav
@@ -91,25 +91,35 @@ const Navbar: React.FC = () => {
           {/* User Profile */}
           <div
             className="hidden md:flex items-center space-x-4 relative"
-            ref={profileRef}
+            onMouseEnter={() => setShowProfilePopup(true)}
+            onMouseLeave={() => setShowProfilePopup(false)}
           >
+            {/* Profile Button - Click to Navigate */}
             <div
               className="flex items-center text-lg rounded-full border-2 px-3 py-1 shadow border-gray-300 font-medium text-slate-600 cursor-pointer"
-              onClick={() => setShowProfilePopup(!showProfilePopup)}
+              onClick={() =>
+                router.push(isSignedIn ? "/profile" : "/no-account")
+              }
             >
               <User />
               Profile
             </div>
+
+            {/* Profile Popup (Shown on Hover) */}
             {showProfilePopup && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
                 exit={{ opacity: 0, y: 10 }}
-                className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48  bg-white shadow-md rounded-md border border-gray-200 py-2 z-30"
-                onMouseEnter={() => setShowProfilePopup(true)}
-                onMouseLeave={() => setShowProfilePopup(false)}
+                className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white shadow-md rounded-md border border-gray-200 py-2 z-30"
               >
-                {!isSignedIn ? (
+                {isSignedIn ? (
+                  <SignOutButton>
+                    <div className="flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-100 w-full text-left transition-all cursor-pointer">
+                      <LogOut size={18} /> Logout
+                    </div>
+                  </SignOutButton>
+                ) : (
                   <>
                     <SignInButton mode="modal">
                       <div className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-all cursor-pointer">
@@ -122,12 +132,6 @@ const Navbar: React.FC = () => {
                       </div>
                     </SignUpButton>
                   </>
-                ) : (
-                  <SignOutButton>
-                    <div className="flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-100 w-full text-left transition-all cursor-pointer">
-                      <LogOut size={18} /> Logout
-                    </div>
-                  </SignOutButton>
                 )}
               </motion.div>
             )}
