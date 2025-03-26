@@ -197,6 +197,19 @@ const PrivacyPolicy = () => {
           </a>
         </p>
       </section>
+      <section>
+        <h1 className="text-2xl font-semibold mb-2">Out Copyright Content</h1>
+        <p className="mt-2">
+          Our content, as found within our website (www.exedu.in), which is
+          owned by or licensed to us. This material includes, but is not limited
+          to, the content, design, layout, look, images, appearance and graphics
+          is protected under The Copyright Act 1957, supported by the Copyright
+          Rules 1958. The copying, redistribution, reproduction use or
+          publication by you of any such content, is strictly prohibited. Your
+          use of our website and services does not grant you any ownership
+          rights to our content.
+        </p>
+      </section>
     </div>
   );
 };

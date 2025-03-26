@@ -30,7 +30,7 @@ const NoAccount = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-gradient-to-b from-slate-50 via-slate-100 to-white"
+      className="min-h-screen"
     >
       <MainContent />
     </div>

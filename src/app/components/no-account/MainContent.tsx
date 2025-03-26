@@ -24,8 +24,8 @@ const MainContent = () => {
           transition={{ duration: 0.6 }}
         >
           <Card className="border-0  overflow-hidden bg-white/80 backdrop-blur-sm  transition-all duration-500 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-edu-100/30 via-transparent to-edu-200/30 opacity-50"></div>
-            <div className="h-1.5 bg-gradient-to-r from-edu-400 via-edu-500 to-edu-600 relative z-10"></div>
+            <div className="absolute inset-0"></div>
+            <div className="h-1.5 bg-gradient-to-r from-violet-400 via-pink-500 to-fuchsia-600 relative z-10"></div>
 
             <CardHeader className="pb-2 relative z-10">
               <div className="flex items-center gap-2 mb-1">
@@ -53,9 +53,9 @@ const MainContent = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Button
-                  className="bg-gradient-to-r from-edu-500 to-primary text-white font-medium rounded-full px-8 py-6 hover:shadow-lg h-auto group relative overflow-hidden"
+                  className="bg-gradient-to-r from-gray-100 to-gray-50 text-black font-medium rounded-full px-8 py-6 hover:shadow-lg h-auto group relative overflow-hidden"
                 >
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-edu-400 to-edu-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-violet-400 to-fuchsia-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   <Link
                     href="/sign-up"
                     className="flex items-center gap-2 relative z-10"

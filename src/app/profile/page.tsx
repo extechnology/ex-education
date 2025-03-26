@@ -65,8 +65,8 @@ const Dashboard = () => {
               src="https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?ga=GA1.1.130507296.1738077489&semt=ais_hybrid"
               alt="Profile"
               className="rounded-lg mx-auto"
-              width={200}
-              height={200}
+              width={500}
+              height={500}
             />
             <h3 className="text-center mt-4 font-semibold">Vipin Raj</h3>
             <p className="text-center text-gray-600">+1-856-569-995-1236</p>
