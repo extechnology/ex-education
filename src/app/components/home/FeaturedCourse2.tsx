@@ -25,7 +25,9 @@ function FeaturedCourse2() {
         const response = await fetch(`${API_URL}/api/courses/`);
         if (!response.ok) throw new Error("Failed to fetch courses");
         const data: Course[] = await response.json();
-        console.log(data, "courses"); // Move log before updating state
+        console.log(data, "courses");
+
+ // Move log before updating state
         setCourses(data);
       } catch (err) {
         setError((err as Error).message);
@@ -47,6 +49,7 @@ function FeaturedCourse2() {
       </h1>
 
       {courses.map((course) => (
+        
         <div
           key={course.id}
           className="md:flex gap-5 space-y-6 px-5 md:px-0"

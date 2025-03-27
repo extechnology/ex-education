@@ -93,6 +93,7 @@ const Navbar: React.FC = () => {
             className="hidden md:flex items-center space-x-4 relative"
             onMouseEnter={() => setShowProfilePopup(true)}
             onMouseLeave={() => setShowProfilePopup(false)}
+            style={{ minWidth: "150px" }}
           >
             {/* Profile Button - Click to Navigate */}
             <div
@@ -101,7 +102,7 @@ const Navbar: React.FC = () => {
                 router.push(isSignedIn ? "/profile" : "/no-account")
               }
             >
-              <User />
+              <User className="mr-2 w-5" />
               Profile
             </div>
 
