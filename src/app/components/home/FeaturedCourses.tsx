@@ -108,6 +108,7 @@ const FeaturedCourses: React.FC = () => {
           <div
             key={course.id}
             className="shadow-md rounded-lg bg-white hover:scale-105 hover:shadow-xl transform transition-transform duration-500"
+            data-aos="zoom-in"
           >
             <Image
               src={course.image}

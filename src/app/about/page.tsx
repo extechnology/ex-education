@@ -34,7 +34,7 @@ function About() {
               </Link>
             </div>
           </div>
-          <div className="relative top-24">
+          <div className="relative top-24" data-aos="fade-up">
             <Image
               src={"/people_sitting.png"}
               alt="no image"

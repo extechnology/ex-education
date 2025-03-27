@@ -1,6 +1,5 @@
 import FeaturedCourses from "../components/home/FeaturedCourses";
 
-
 function Page() {
   return (
     <div className="pt-20 ">
@@ -17,15 +16,18 @@ function Page() {
           Build a Professional Career With exedu
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl pt-14 mx-auto text-center pb-10 gap-10 px-8">
-          <div className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 backdrop-blur-2xl text-slate-100">
+          <div
+            data-aos="zoom-in"
+            className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 backdrop-blur-2xl text-slate-100"
+          >
             <h1 className="text-xl font-medium">Advertisements & Promotions</h1>
           </div>
-          <div className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100">
+          <div data-aos="zoom-in" className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100">
             <h1 className="text-xl font-medium">
               Grow & Up Skill Your <br /> Creative Skill
             </h1>
           </div>
-          <div className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100">
+          <div data-aos="zoom-in" className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100">
             <h1 className="text-xl font-medium">Develop Web & Application</h1>
           </div>
         </div>
@@ -36,4 +38,4 @@ function Page() {
     </div>
   );
 }
-export default Page
+export default Page;

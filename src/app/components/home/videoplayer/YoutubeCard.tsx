@@ -22,7 +22,10 @@ const YouTubeCard: React.FC<YouTubeCardProps> = ({
   };
 
   return (
-    <div className="relative w-full overflow-hidden shadow-lg">
+    <div
+      data-aos="fade-up"
+      className="relative w-full overflow-hidden shadow-lg"
+    >
       {isPlaying ? (
         <div className="video-wrapper">
           {" "}
