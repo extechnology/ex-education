@@ -64,7 +64,7 @@ const Dashboard = () => {
 
         {/* Background Section */}
         <div>
-          <div className="bg-[url('https://img.freepik.com/free-vector/abstract-elegant-geometric-shape-background-design_1017-50120.jpg')] bg-no-repeat bg-cover rounded-2xl md:p-6 mt-6 w-full overflow-hidden">
+          <div className="bg-gray-100 md:bg-[url('https://img.freepik.com/free-vector/abstract-elegant-geometric-shape-background-design_1017-50120.jpg')] bg-no-repeat bg-cover rounded-2xl md:p-6 mt-6 w-full overflow-hidden">
             <div className="md:flex gap-6 space-y-6 md:space-y-0">
               {/* Profile Card */}
               <div className="bg-white p-6 w-full md:w-1/3 rounded-2xl shadow-md">

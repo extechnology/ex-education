@@ -49,8 +49,8 @@ function Contact() {
   };
 
   return (
-    <div className="bg-gray-100 pb-20">
-      <div className="md:pt-40 max-w-7xl pt-32 pb-20 mx-auto grid grid-cols-1 md:grid-cols-2 justify-center px-4 md:px-0 md:pb-0">
+    <div className="bg-gray-100 md:pb-20 pb-6">
+      <div className="md:pt-40 max-w-7xl pt-32  mx-auto grid grid-cols-1 md:grid-cols-2 justify-center px-4 md:px-0 md:pb-0">
         <div data-aos="zoom-in" className="content-center pb-7 md:pb-0">
           <Image
             src="https://img.freepik.com/free-photo/3d-rendering-luxury-business-meeting-working-room-executive-office_105762-1993.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost"
