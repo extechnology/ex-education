@@ -4,7 +4,7 @@ function Mission() {
   return (
     <div className="bg-teal-600 ">
       <div className="max-w-6xl mx-auto md:flex content-center py-15 gap-10 px-5 md:px-0">
-        <div data-aos="fade-right" className="md:w-1/3 pb-10 md:pb-0">
+        <div data-aos="fade-down" className="md:w-1/3 pb-10 md:pb-0">
           <Image
             src="/mission.png"
             alt="no image"
@@ -27,7 +27,7 @@ function Mission() {
             evolving digital world, fostering creativity, innovation, and
             career-ready expertise.
           </p>
-          <div data-aos="zoom-out-down" className="pt-5 flex justify-center md:justify-start">
+          <div data-aos="fade-up" className="pt-5 flex justify-center md:justify-start">
             <button className="p-4 text-white w-50 hover:w-70 transition-all duration-500 hover:bg-teal-800 rounded-2xl bg-teal-700 shadow-md">
               Book Your Seat Now!
             </button>

@@ -13,7 +13,7 @@ const AboutUs: React.FC = () => {
             width={500}
             height={50}
             className="md:h-60 md:w-90 rounded-xl md:relative md:left-10 md:top-15 md:-rotate-1 md:skew-y-5 z-10 border-4 border-gray-300 shadow-xl"
-            data-aos="fade-left"
+            data-aos="fade-up"
           />
           <Image
             src="https://img.freepik.com/free-photo/happy-engineers-checking-signs-imminent-failure-data-center_482257-94725.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid"

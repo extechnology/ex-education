@@ -6,13 +6,13 @@ function Whyexedu() {
       <div className="max-w-7xl mx-auto pt-10 md:flex">
         <div className="md:w-2/3 px-5 md:px-0">
           <h1
-            data-aos="fade-right"
+            data-aos="fade-down"
             className="md:text-4xl text-3xl font-bold text-fuchsia-700 md:py-4"
           >
             Why Choose exedu
           </h1>
           <p
-            data-aos="fade-right"
+            data-aos="fade-up"
             className="md:text-lg text-md pt-3 text-justify"
           >
             exedu is a leading Hybrid AI Education institute, merging advanced
