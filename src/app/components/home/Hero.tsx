@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl text-gray-800 lg:py-14 md:py-10 py-10">
         <div className="content-center space-y-6 px-3 md:px-0">
           <h1
-            data-aos="flip-up"
+            data-aos="flip-down"
             className="text-5xl md:text-6xl font-bold leading-14 md:leading-16"
           >
             Kerala&apos;s Leading{" "}
