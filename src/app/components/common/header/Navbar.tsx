@@ -31,6 +31,7 @@ const Navbar: React.FC = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const [popupTimeout, setPopupTimeout] = useState<NodeJS.Timeout | null>(null);
 
   // Clerk user authentication
   const {  isSignedIn } = useUser();
@@ -91,8 +92,20 @@ const Navbar: React.FC = () => {
           {/* User Profile */}
           <div
             className="hidden md:flex items-center space-x-4 relative"
-            onMouseEnter={() => setShowProfilePopup(true)}
-            onMouseLeave={() => setShowProfilePopup(false)}
+            onMouseEnter={() => {
+              // Clear any existing timeout to prevent premature hiding
+              if (popupTimeout) {
+                clearTimeout(popupTimeout);
+                setPopupTimeout(null);
+              }
+              setShowProfilePopup(true);
+            }}
+            onMouseLeave={() => {
+              const timeout = setTimeout(() => {
+                setShowProfilePopup(false);
+              }, 1000);
+              setPopupTimeout(timeout);
+            }}
             style={{ minWidth: "150px" }}
           >
             {/* Profile Button - Click to Navigate */}
@@ -110,7 +123,7 @@ const Navbar: React.FC = () => {
             {showProfilePopup && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
+                animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
                 exit={{ opacity: 0, y: 10 }}
                 className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white shadow-md rounded-md border border-gray-200 py-2 z-30"
               >
@@ -176,13 +189,48 @@ const Navbar: React.FC = () => {
               </li>
             ))}
             <li className="py-5">
-              <Link
-                href="/profile"
+              <button
                 className="w-full shadow-md rounded-2xl px-3 py-2 bg-gray-100 text-fuchsia-600 border-white block text-center"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  router.push(isSignedIn ? "/profile" : "/no-account");
+                  setIsOpen(false);
+                }}
               >
                 Profile
-              </Link>
+              </button>
+            </li>
+
+            {/* Authentication Buttons */}
+            <li className="py-2">
+              {isSignedIn ? (
+                <SignOutButton>
+                  <div
+                    className="flex items-center gap-2 px-4 py-2 text-red-600 bg-white shadow-md rounded-md text-center justify-center hover:bg-red-100 transition-all cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <LogOut size={18} /> Logout
+                  </div>
+                </SignOutButton>
+              ) : (
+                <>
+                  <SignInButton mode="modal">
+                    <div
+                      className="flex items-center gap-2 px-4 py-2 text-gray-700 bg-white shadow-md rounded-md text-center justify-center hover:bg-gray-100 transition-all cursor-pointer"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <LogIn size={18} /> Login
+                    </div>
+                  </SignInButton>
+                  <SignUpButton mode="modal">
+                    <div
+                      className="flex items-center gap-2 px-4 py-2 text-gray-700 bg-white shadow-md rounded-md text-center justify-center hover:bg-gray-100 transition-all cursor-pointer mt-2"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <UserPlus size={18} /> Sign Up
+                    </div>
+                  </SignUpButton>
+                </>
+              )}
             </li>
           </ul>
         </motion.div>

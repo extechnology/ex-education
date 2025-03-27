@@ -43,8 +43,8 @@ const ProgressSection = () => {
 
   return (
     <div>
-      <h1 className="pl-8 py-6">
-        <span className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-600">
+      <h1 className="md:pl-8 py-6 text-center md:text-start">
+        <span className="text-lg  font-semibold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-600">
           exedu Progress Section
         </span>
       </h1>

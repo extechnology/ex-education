@@ -12,48 +12,42 @@ const courseDetails = [
     id: 1,
     title: "AI Advanced Digital Marketing",
     description: "3 Months Course + Internship",
-    image:
-      "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg",
+    image: "/AI advanced digital marketing .jpg",
     color: "bg-fuchsia-600",
   },
   {
     id: 2,
     title: "Graphic Design",
     description: "3 Months Course + Internship",
-    image:
-      "https://img.freepik.com/free-psd/graphic-designer-top-view-mockup-with-laptop_23-2147675736.jpg",
+    image: "/Graphic designing.jpg",
     color: "bg-sky-400",
   },
   {
     id: 3,
     title: "Robotics",
     description: "1 Month Course , Robotics Level 1",
-    image:
-      "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg",
+    image: "/robotics.jpg",
     color: "bg-orange-600",
   },
   {
     id: 4,
     title: "Web & App Development",
     description: "3 Months Course + Internship",
-    image:
-      "https://img.freepik.com/free-vector/creative-web-homepage-illustration_52683-79847.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
+    image: "/web & mobile app development .jpg",
     color: "bg-teal-600",
   },
   {
     id: 5,
     title: "UI/UX Designing",
     description: "3 Months Course + Internship",
-    image:
-      "https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
+    image: "/ui ux- designing.jpg",
     color: "bg-violet-600",
   },
   {
     id: 6,
     title: "Video Editing",
     description: "3 Months Course + Internship",
-    image:
-      "https://img.freepik.com/free-vector/broadcasting-live-event-concept_23-2148527129.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_keywords_boost",
+    image: "/video editing.jpg",
     color: "bg-green-600",
   },
 ];

@@ -44,10 +44,10 @@ const Dashboard = () => {
       {/* Main content */}
       <main className="md:flex-1 p-4 md:p-8 bg-white max-w-full overflow-hidden">
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl text-gray-700 font-semibold">
+          <h2 className="md:text-2xl text-gray-700 font-semibold">
             Welcome to exedu student portal
           </h2>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 md:pr-4">
             <FaBell className="text-gray-600" />
             <div className="flex items-center space-x-2">
               <Image
@@ -64,8 +64,8 @@ const Dashboard = () => {
 
         {/* Background Section */}
         <div>
-          <div className="bg-[url('https://img.freepik.com/free-vector/abstract-elegant-geometric-shape-background-design_1017-50120.jpg')] bg-no-repeat bg-cover rounded-2xl p-6 mt-6 w-full overflow-hidden">
-            <div className="md:flex gap-6">
+          <div className="bg-[url('https://img.freepik.com/free-vector/abstract-elegant-geometric-shape-background-design_1017-50120.jpg')] bg-no-repeat bg-cover rounded-2xl md:p-6 mt-6 w-full overflow-hidden">
+            <div className="md:flex gap-6 space-y-6 md:space-y-0">
               {/* Profile Card */}
               <div className="bg-white p-6 w-full md:w-1/3 rounded-2xl shadow-md">
                 <Image
@@ -88,7 +88,7 @@ const Dashboard = () => {
               {/* Right Section */}
               <div className="space-y-6 w-full md:w-2/3">
                 {/* Education Section */}
-                <div className="md:flex gap-6">
+                <div className="md:flex gap-6 space-y-6 md:space-y-0">
                   <div className="bg-white p-6 rounded-2xl shadow-md">
                     <h3 className="font-semibold">
                       <span className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-600">
@@ -161,7 +161,7 @@ const Dashboard = () => {
             </div>
 
             {/* Attendance Tracker */}
-            <div className="mt-6 md:flex gap-6 ">
+            <div className="mt-6 md:flex gap-6 space-y-6 md:space-y-0 ">
               <div>
                 <AttendanceTracker />
               </div>

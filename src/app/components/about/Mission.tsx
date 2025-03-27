@@ -27,7 +27,7 @@ function Mission() {
             evolving digital world, fostering creativity, innovation, and
             career-ready expertise.
           </p>
-          <div className="pt-5 flex justify-center md:justify-start">
+          <div data-aos="zoom-out-down" className="pt-5 flex justify-center md:justify-start">
             <button className="p-4 text-white w-50 hover:w-70 transition-all duration-500 hover:bg-teal-800 rounded-2xl bg-teal-700 shadow-md">
               Book Your Seat Now!
             </button>
