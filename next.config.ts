@@ -3,12 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Temporarily allow unoptimized images
+    domains: ["server.exedu.in"],
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "127.0.0.1",
-        port: "8000",
-        pathname: "/images/**", // Allow all images from /images/
+        protocol: "https",
+        hostname: "server.exedu.in",
+        pathname: "/media/**",
       },
       {
         protocol: "https",

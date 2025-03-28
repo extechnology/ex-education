@@ -11,7 +11,7 @@ function Mission() {
   )?.image;
 
   return (
-    <div className="bg-teal-600 ">
+    <div className="bg-violet-900 ">
       <div className="max-w-6xl mx-auto md:flex content-center py-15 gap-10 px-5 md:px-0">
         <div data-aos="fade-down" className="md:w-1/3 pb-10 md:pb-0">
           {missionImage ? (
@@ -20,7 +20,7 @@ function Mission() {
               alt="no image"
               width={400}
               height={400}
-              className="rounded-md w-[75%] mx-auto md:w-full"
+              className="rounded-full w-[75%] mx-auto md:w-full"
             />
           ) : (
             <p>no image</p>
@@ -50,7 +50,7 @@ function Mission() {
             data-aos="fade-up"
             className="pt-5 flex justify-center md:justify-start"
           >
-            <button className="p-4 text-white w-50 hover:w-70 transition-all duration-500 hover:bg-teal-800 rounded-2xl bg-teal-700 shadow-md">
+            <button className="p-4 text-white w-50 hover:w-70 transition-all duration-500 hover:bg-violet-700 rounded-2xl bg-violet-500 shadow-md">
               Book Your Seat Now!
             </button>
           </div>

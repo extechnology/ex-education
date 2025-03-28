@@ -4,10 +4,11 @@ import { useImages } from "@/app/hooks/image-hook";
 const Hero: React.FC = () => {
   const { data, isLoading, error } = useImages();
   console.log(data);
+
   if (isLoading) return <p>Loading hero image...</p>;
   if (error) return <p>Failed to load images</p>;
 
-  const heroImage = data.find(
+  const heroImage = data?.find(
     (item: { section: string }) => item.section === "hero"
   )?.image;
 

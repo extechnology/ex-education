@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://server.exedu.in";
 
 // Define TypeScript interface
 interface Course {
@@ -30,6 +30,7 @@ function FeaturedCourse2() {
  // Move log before updating state
         setCourses(data);
       } catch (err) {
+        console.error("Error fetching courses:", err);
         setError((err as Error).message);
       } finally {
         setLoading(false);

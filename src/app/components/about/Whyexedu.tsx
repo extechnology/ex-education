@@ -17,7 +17,7 @@ function Whyexedu() {
 
   return (
     <div className="bg-[#F4F7FB] ">
-      <div className="max-w-7xl mx-auto pt-10 md:flex">
+      <div className="max-w-7xl mx-auto py-10  md:flex">
         <div className="md:w-2/3 px-5 md:px-0">
           <h1
             data-aos="fade-down"
@@ -43,14 +43,14 @@ function Whyexedu() {
             Delivering Projects.
           </p>
         </div>
-        <div className="md:w-1/3" data-aos="fade-up">
+        <div className="md:w-1/3 pt-5 md:pt-0" data-aos="fade-up">
           {whyUs ? (
             <Image
               src={whyUs}
               alt=""
               width={500}
               height={500}
-              className="md:w-[80%] mx-auto w-full"
+              className="md:w-[80%] w-[90%] mx-auto rounded-2xl"
             />
           ) : (
             <p>no image</p>
