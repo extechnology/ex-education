@@ -1,6 +1,20 @@
 import Image from "next/image";
+import { useImages } from "@/app/hooks/image-hook";
 
 function Whyexedu() {
+
+  const { data, isLoading, error } = useImages(); // ✅ Now it works!
+
+  console.log(data);
+
+  const whyUs = data?.find(
+    (item: { section: string }) => item.section === "why_us"
+  )?.image;
+
+  if (isLoading) return <p>Loading image...</p>;
+  if (error) return <p>Failed to load images</p>;
+
+
   return (
     <div className="bg-[#F4F7FB] ">
       <div className="max-w-7xl mx-auto pt-10 md:flex">
@@ -30,13 +44,17 @@ function Whyexedu() {
           </p>
         </div>
         <div className="md:w-1/3" data-aos="fade-up">
-          <Image
-            src="/why_us.png"
-            alt=""
-            width={500}
-            height={500}
-            className="md:w-[80%] mx-auto w-full"
-          />
+          {whyUs ? (
+            <Image
+              src={whyUs}
+              alt=""
+              width={500}
+              height={500}
+              className="md:w-[80%] mx-auto w-full"
+            />
+          ) : (
+            <p>no image</p>
+          )}
         </div>
       </div>
     </div>

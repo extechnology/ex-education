@@ -81,13 +81,13 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <div className="flex-col justify-center space-y-8">
-          <div>
+          <div className="flex justify-end">
             <Image
-              src="/ededu_logo (2).png"
+              src="/ex edu logo-03.png"
               alt="logo"
               width={250}
               height={250}
-              className="p-4 bg-gray-100 rounded"
+              className=""
             />
           </div>
         </div>
@@ -95,7 +95,9 @@ const Footer: React.FC = () => {
       <hr className=" mt-10 text-slate-700 border-[1px]" />
       <div className=" max-w-7xl mx-auto px-5 pt-5">
         <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 md:space-y-0">
-          <div>Powered By Extechnology</div>
+          <div className="">
+            <Image src="/EX_TECHNOLOGY_LOGO-01.png" alt="" height={70} width={70} />
+          </div>
           <div className="relative inline-block">
             <p
               className="cursor-pointer hover:text-gray-300 transition-all"

@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import AboutUs from "./components/home/OurPassion";
 import FeaturedCourse2 from "./components/home/FeaturedCourse2";
 import Hero from "./components/home/Hero";
-import VideoGrid from "./components/home/videoplayer/VideoGrid";
+// import VideoGrid from "./components/home/videoplayer/VideoGrid";
 
 export default function Home() {
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Home() {
       <Hero />
       <FeaturedCourse2 />
       <AboutUs />
-      <VideoGrid />
+      {/* <VideoGrid /> */}
     </div>
   );
 }

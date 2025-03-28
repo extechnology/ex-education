@@ -1,6 +1,15 @@
 import Image from "next/image";
+import { useImages } from "@/app/hooks/image-hook";
 
 function ConfirmCareer() {
+  const { data, isLoading, error } = useImages();
+  if (isLoading) return <p>Loading image...</p>;
+  if (error) return <p>Failed to load images</p>;
+
+  const confirmCareer = data.find(
+    (item: { section: string }) => item.section === "confirm_career"
+  )?.image;
+
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="md:flex max-w-7xl mx-auto py-5 ">
@@ -26,13 +35,17 @@ function ConfirmCareer() {
           </p>
         </div>
         <div data-aos="zoom-in" className="md:w-1/3 px-5 md:px-0 pt-5 md:pt-0">
-          <Image
-            src="https://img.freepik.com/free-vector/ai-technology-microchip-background-vector-digital-transformation-concept_53876-112222.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid"
-            alt="no image"
-            width={450}
-            height={450}
-            className="rounded-4xl"
-          />
+          {confirmCareer ? (
+            <Image
+              src={confirmCareer}
+              alt="no image"
+              width={450}
+              height={450}
+              className="rounded-4xl"
+            />
+          ) : (
+            <p>Image not found</p>
+          )}
         </div>
       </div>
     </div>

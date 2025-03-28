@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import Footer from "./components/common/footer/Footer";
 import WhatsAppButton from "./components/common/whatsapp/WhatsappIcon";
 import { ClerkProvider } from "@clerk/nextjs";
+import QueryProvider from "./provider/QueryProvider";
 
 const poppins = Poppins({
   weight: ["400", "700"],
@@ -50,16 +51,20 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={`${poppins.variable} antialiased`}>
-          <main>
-            <Navbar />
-            {children}
-            <WhatsAppButton />
-            <Footer />
-          </main>
-        </body>
-      </html>
+      <QueryProvider>
+        {" "}
+        {/* ✅ Now using the client-safe QueryProvider */}
+        <html lang="en">
+          <body className={`${poppins.variable} antialiased`}>
+            <main>
+              <Navbar />
+              {children}
+              <WhatsAppButton />
+              <Footer />
+            </main>
+          </body>
+        </html>
+      </QueryProvider>
     </ClerkProvider>
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white pb-14">
       <div className="grid grid-cols-1 gap-14 md:grid-cols-2 max-w-7xl mx-auto py-10 md:pt-30 md:pb-10 px-5">
         {/* Image Section */}
         <div className="flex flex-col items-center space-y-5 md:grid  md:grid-cols-2 md:justify-center">

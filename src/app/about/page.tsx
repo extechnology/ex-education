@@ -1,11 +1,27 @@
+"use client";
 import Image from "next/image";
 import Whyexedu from "../components/about/Whyexedu";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import Mission from "../components/about/Mission";
 import ConfirmCareer from "../components/about/ConfirmCareer";
+import { useImages } from "../hooks/image-hook";
+
+
 
 function About() {
+  
+  const { data, isLoading, error } = useImages(); // ✅ Now it works!
+
+  console.log(data);
+
+  const aboutUs = data?.find(
+    (item: { section: string }) => item.section === "about_us"
+  )?.image;
+
+  if (isLoading) return <p>Loading image...</p>;
+  if (error) return <p>Failed to load images</p>;
+
   return (
     <div>
       <div className="bg-[#F4F7FB] pt-36 pb-24  bg-[url('https://img.freepik.com/free-vector/gradient-colorful-grainy-dynamic-background_52683-101908.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid')] bg-no-repeat bg-cover">
@@ -35,12 +51,11 @@ function About() {
             </div>
           </div>
           <div className="relative top-24" data-aos="fade-up">
-            <Image
-              src={"/people_sitting.png"}
-              alt="no image"
-              width={600}
-              height={600}
-            />
+            {aboutUs ? (
+              <Image src={aboutUs} alt="no image" width={600} height={600} />
+            ) : (
+              <p>no image</p>
+            )}
           </div>
         </div>
       </div>
