@@ -34,7 +34,7 @@ function ConfirmCareer() {
             to thrive in today’s tech-driven world.
           </p>
         </div>
-        <div data-aos="zoom-in" className="md:w-1/3 flex justify-end px-5 md:px-0 pt-5 md:pt-0">
+        <div data-aos="zoom-in" className="md:w-1/3 flex md:justify-end px-5 md:px-0 pt-5 md:pt-0">
           {confirmCareer ? (
             <Image
               src={confirmCareer}

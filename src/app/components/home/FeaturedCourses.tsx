@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -12,7 +12,7 @@ const courseDetails = [
     id: 1,
     title: "AI Advanced Digital Marketing",
     description: "3 Months Course + Internship",
-    image: "/AI advanced.jpg",
+    image: "/AIDigitalMarketing.jpg",
     color: "bg-fuchsia-600",
   },
   {
@@ -56,7 +56,7 @@ const FeaturedCourses: React.FC = () => {
   return (
     <div className="text-gray-800 max-w-7xl mx-auto space-y-5 pt-10 md:py-20 md:px-10 lg:px-0">
       {/* Mobile Slider */}
-      <div className="md:hidden px-4">
+      {/* <div className="md:hidden px-4">
         <Swiper
           modules={[Pagination]}
           spaceBetween={20}
@@ -94,10 +94,10 @@ const FeaturedCourses: React.FC = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </div> */}
 
       {/* Grid Layout for Larger Screens */}
-      <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-5 gap-y-10 px-4 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 gap-y-10 px-4 md:px-0">
         {courseDetails.map((course) => (
           <div
             key={course.id}
