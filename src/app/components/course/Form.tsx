@@ -11,8 +11,8 @@ interface FormData {
 }
 
 interface PropsData {
- id:number;
- title: string;
+  id: number;
+  title: string;
 }
 
 interface FormProps {
@@ -25,22 +25,37 @@ export default function Form({ course }: FormProps) {
     name: "",
     phone: "",
     email: "",
-    title: "",
+    title: course.title,
   });
 
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name as keyof FormData]: e.target.value,
+    }));
   };
 
   const validateForm = () => {
-    const phonePattern = /^[0-9]{10,15}$/;
-    if (!phonePattern.test(formData.phone)) {
+    if (!formData.name.trim()) {
+      setError("Name is required.");
+      return false;
+    }
+
+    if (!/^[0-9]{10,15}$/.test(formData.phone)) {
       setError("Phone number must be 10-15 digits.");
       return false;
     }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setError("Please enter a valid email address.");
+      return false;
+    }
+
     return true;
   };
 
@@ -52,21 +67,40 @@ export default function Form({ course }: FormProps) {
     if (!validateForm()) return;
 
     try {
-      const response = await fetch("/api/enroll", {
+      const response = await fetch("http://127.0.0.1:8000/api/enroll_form/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setSuccess("Form submitted successfully!");
-        setFormData({id: course.id, name: "", phone: "", email: "", title: "" });
-      } else {
-        setError("Failed to submit form. Please try again.");
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(
+          errorText || "Failed to submit form. Please try again."
+        );
       }
+
+      setSuccess("Form submitted successfully!");
+      setIsFormSubmitted(true);
+      setFormData({
+        id: course.id,
+        name: "",
+        phone: "",
+        email: "",
+        title: course.title,
+      });
     } catch (error) {
-      console.error("Error submitting form:", error);
-      setError("An error occurred. Please check your connection.");
+      setError(
+        error instanceof Error ? error.message : "Something went wrong."
+      );
+    }
+  };
+
+  const handleBrochureDownload = (e: React.MouseEvent) => {
+    if (!isFormSubmitted) {
+      e.preventDefault();
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000); // Hide after 3 seconds
     }
   };
 
@@ -142,13 +176,25 @@ export default function Form({ course }: FormProps) {
             </button>
           </form>
 
-          <div className="flex justify-between text-sm text-gray-600 mt-4">
+          <div className="relative mt-4 flex justify-between text-sm text-gray-600">
             <a href="#" className="hover:underline">
               Chat With Course Counselor
             </a>
-            <a href="#" className="hover:underline">
+            <a
+              href={isFormSubmitted ? "/cv.pdf" : "#"}
+              download="Course-Brochure.pdf"
+              onClick={handleBrochureDownload}
+              className="hover:underline relative"
+            >
               Download Brochure
             </a>
+
+            {/* Toast Notification */}
+            {showToast && (
+              <div className="absolute right-0 bottom-8 bg-red-500 text-white px-4 py-2 rounded-lg text-sm shadow-md transition-opacity duration-300">
+                Please submit the form first!
+              </div>
+            )}
           </div>
         </div>
       </div>
