@@ -8,9 +8,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+
 // Clerk Authentication Hooks
 import {
   useUser,
+  useAuth,
   SignInButton,
   SignUpButton,
   SignOutButton,
@@ -32,9 +34,18 @@ const Navbar: React.FC = () => {
   const profileRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const [popupTimeout, setPopupTimeout] = useState<NodeJS.Timeout | null>(null);
-
+  const [profileId, setProfileId] = useState<string | null>(null);
   // Clerk user authentication
-  const {  isSignedIn } = useUser();
+  const { isSignedIn, user } = useUser();
+  const { getToken } = useAuth();
+
+  useEffect(() => {
+    // Retrieve profile ID from localStorage
+    const storedProfileId = localStorage.getItem("profileId");
+    if (storedProfileId) {
+      setProfileId(storedProfileId);
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 50);
@@ -55,6 +66,46 @@ const Navbar: React.FC = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [pathname]);
+
+
+
+  const handleProfileClick = async () => {
+    if (!isSignedIn) {
+      router.push("/no-account");
+      return;
+    }
+
+    try {
+      const token = await getToken();
+      const clerkUserId = user?.id;
+
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/profiles/me/`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "Clerk-User-Id": clerkUserId ?? "",
+            Authorization: `Bearer ${token}`, 
+          },
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        const profileId = data.id;
+
+        localStorage.setItem("profileId", profileId);
+
+        router.push(`/profile/${profileId}`);
+      } else {
+        router.push("/no-account"); 
+      }
+    } catch (error) {
+      console.error("Error checking profile:", error);
+      router.push("/no-account");
+    }
+  };
 
   return (
     <nav
@@ -111,9 +162,7 @@ const Navbar: React.FC = () => {
             {/* Profile Button - Click to Navigate */}
             <div
               className="flex items-center text-lg rounded-full border-2 px-3 py-1 shadow border-gray-300 font-medium text-slate-600 cursor-pointer"
-              onClick={() =>
-                router.push(isSignedIn ? "/profile" : "/no-account")
-              }
+              onClick={handleProfileClick}
             >
               <User className="mr-2 w-5" />
               Profile

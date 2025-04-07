@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Whyexedu from "../components/about/Whyexedu";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
@@ -11,7 +10,7 @@ import { useImages } from "../hooks/image-hook";
 
 function About() {
   
-  const { data, isLoading, error } = useImages(); // ✅ Now it works!
+  const { data, isLoading, error } = useImages(); 
 
   console.log(data);
 
@@ -24,9 +23,16 @@ function About() {
 
   return (
     <div>
-      <div className="bg-[#F4F7FB] pt-36 pb-24  bg-[url('https://img.freepik.com/free-vector/gradient-colorful-grainy-dynamic-background_52683-101908.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid')] bg-no-repeat bg-cover">
+      <div
+        className="bg-[#F4F7FB] pt-36 pb-32 bg-no-repeat bg-cover"
+        style={{
+          backgroundImage: aboutUs
+            ? `url(${aboutUs})`
+            : "url('/about_background.jpg')",
+        }}
+      >
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 justify-center content-center text-white">
-          <div className="content-end relative md:top-10 px-5">
+          <div className="content-end py-10 relative md:top-18 px-5">
             <div>
               <h1 className="content-center text-6xl font-bold">ABOUT US</h1>
             </div>
@@ -50,13 +56,13 @@ function About() {
               </Link>
             </div>
           </div>
-          <div className="relative top-24" data-aos="fade-up">
+          {/* <div className="relative top-24" data-aos="fade-up">
             {aboutUs ? (
               <Image src={aboutUs} alt="no image" width={600} height={600} />
             ) : (
               <p>no image</p>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
       <div>

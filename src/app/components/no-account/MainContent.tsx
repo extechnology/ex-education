@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { useUser, SignInButton } from "@clerk/nextjs";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "../ui/button";
 import {
@@ -13,8 +14,33 @@ import {
 import { motion } from "framer-motion";
 import ProfileSection from "./ProfileSection";
 import FeatureSection from "./FeatureSection";
+import ProfileModal from "../profile/ProfileModal"; // Import your modal component
+import { useSignIn, RedirectToSignIn } from "@clerk/clerk-react";
 
 const MainContent = () => {
+  const { isSignedIn } = useUser(); // Check user authentication status
+  const [showModal, setShowModal] = useState(false); // Modal state
+  const [redirect, setRedirect] = useState(false);
+
+  if (redirect) {
+    return <RedirectToSignIn />;
+  }
+
+  const handleCreateProfileClick = () => {
+    if (isSignedIn) {
+      setShowModal(true); // Open modal if signed in
+    } else {
+      setRedirect(true); // Trigger RedirectToSignIn
+    }
+  };
+
+
+  const handleFormSubmit = (formData: FormData) => {
+    console.log("Submitted Form Data:", Object.fromEntries(formData.entries()));
+    // You can send formData to an API here
+  };
+
+
   return (
     <main className="flex-grow container mx-auto px-4 pb-12 pt-25">
       <div className="max-w-7xl mx-auto">
@@ -53,22 +79,29 @@ const MainContent = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Button
-                  className="bg-gradient-to-r from-gray-100 to-gray-50 text-black font-medium rounded-full px-8 py-6 hover:shadow-lg h-auto group relative overflow-hidden"
+                  onClick={handleCreateProfileClick}
+                  className="bg-gradient-to-r  shadow-lg from-gray-100 hover:text-white  to-gray-50 text-black font-medium rounded-full px-8 py-6 hover:shadow-lg h-auto group relative overflow-hidden"
                 >
                   <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-violet-400 to-fuchsia-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  <Link
-                    href="/sign-up"
-                    className="flex items-center gap-2 relative z-10"
-                  >
-                    Create Your Account
+                  <div className="flex items-center gap-2  relative z-10">
+                    Create Your Profile
                     <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </div>
                 </Button>
               </motion.div>
             </CardFooter>
           </Card>
         </motion.div>
       </div>
+
+      {/* Render the ProfileModal if showModal is true */}
+      {showModal && (
+        <ProfileModal
+          isOpen={showModal}
+          onClose={() => setShowModal(false)}
+          onSubmit={handleFormSubmit} // ✅ Correct prop name
+        />
+      )}
     </main>
   );
 };

@@ -41,7 +41,7 @@ function ConfirmCareer() {
               alt="no image"
               width={350}
               height={300}
-              className="rounded-4xl"
+              className="rounded-4xl md:w-[80%] mx-auto"
             />
           ) : (
             <p>Image not found</p>

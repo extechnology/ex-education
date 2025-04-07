@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://server.exedu.in";
+const API_URL =  "https://server.exedu.in";
 
 // Define TypeScript interface
 interface Course {
@@ -45,7 +45,7 @@ function FeaturedCourse2() {
 
   return (
     <div className="max-w-6xl mx-auto space-y-5 pb-10 md:px-10 lg:px-0">
-      <h1 className="font-bold md:text-4xl text-3xl px-5 text-center md:text-start pb-3">
+      <h1 className="font-bold md:text-4xl text-3xl px-5 md:px-0 text-center md:text-start pb-3">
         Our <span className="text-fuchsia-700">Advanced</span> Courses
       </h1>
 

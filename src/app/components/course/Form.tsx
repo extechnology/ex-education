@@ -105,8 +105,8 @@ export default function Form({ course }: FormProps) {
   };
 
   return (
-    <div className="md:flex md:pt-48 pt-23 md:pb-28 items-center justify-center bg-gradient-to-r from-purple-500 to-purple-700">
-      <div className="md:flex md:w-3/4 max-w-4xl bg-white shadow-lg md:rounded-lg overflow-hidden">
+    <div className="md:flex md:pt-52 pt-23 md:pb-32 items-center justify-center bg-gradient-to-r from-purple-500 to-purple-700">
+      <div className="md:flex md:w-3/4 max-w-4xl  bg-white shadow-lg md:rounded-lg overflow-hidden">
         {/* Left Side */}
         <div className="md:w-1/2 p-10 flex flex-col justify-center items-center text-white bg-gradient-to-r from-purple-500 to-purple-700">
           <h2 className="text-2xl text-center font-semibold">{course.title}</h2>

@@ -159,7 +159,7 @@ function Contact() {
                       })}
                       className="w-full border-b border-black bg-transparent py-1 focus:outline-none"
                     >
-                      <option value="" disabled selected>
+                      <option value="" disabled >
                         Select a course
                       </option>
                       <option value="digital-marketing">
@@ -185,7 +185,7 @@ function Contact() {
                     {loading ? "Submitting..." : "Contact Us"}
                   </button>
                   {message && (
-                    <p className="text-center mt-3 text-lg">{message}</p>
+                    <p className="text-center mt-3 bg-amber-100 p-2 rounded-lg text-lg">{message}</p>
                   )}
                 </form>
               </div>

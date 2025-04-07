@@ -15,7 +15,7 @@ export default async function CourseDetail({
   const courseId = resolvedParams.id;
   const course = Courses.find((c) => c.id.toString() === courseId);
 
-  if (!course) return notFound(); // If the course is not found, show a 404 page
+  if (!course) return notFound();
 
   return (
     <div>
@@ -65,15 +65,37 @@ export default async function CourseDetail({
         </h1>
         <div className="md:flex gap-5 md:px-5">
           <Image
-            src={course.image3}
+            src={course.image2}
             alt="no image"
-            className="rounded-lg md:py-3 "
+            className="rounded-lg md:pt-4 md:pb-1 "
             height={400}
             width={400}
           />
-          <p className="pt-5 text-gray-700 text-lg text-justify md:w-[80%] w-[90%] mx-auto">
-            {course.content}
-          </p>
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-10 content-center">
+            <div className="content-center px-5 md:px-0">
+              <div className="pt-5 text-gray-700 text-lg text-justify  mx-auto">
+                {Array.isArray(course.content) && (
+                  <ul className="list-disc pl-5 content-center space-y-1">
+                    {course.content.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+            <div className="bg-gradient-to-r from-gray-100 to-gray-200 mt-5 mx-3 md:mx-0 p-5 rounded-2xl">
+              <p className="text-center text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">Our Specialties</p>
+              <p className="pt-5 text-gray-700 content-center text-lg text-justify  mx-auto">
+                {Array.isArray(course.specialties) && (
+                  <ul className="space-y-3 md:space-y-2 font-medium  content-center">
+                    {course.specialties.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

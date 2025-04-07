@@ -27,11 +27,11 @@ const AttendanceTracker = () => {
           {attendance.flat().filter(Boolean).length} Days Present
         </span>
       </div>
-      <div className="grid grid-rows-5 gap-2">
+      <div className="grid grid-rows-5  gap-2">
         {attendance.slice(0, 5).map(
           (
             week,
-            idx // Only take the first 5 days (Mon-Fri)
+            idx 
           ) => (
             <div key={idx} className="flex items-center space-x-2">
               <span className="text-gray-700 w-12 font-semibold">

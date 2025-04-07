@@ -4,15 +4,27 @@ const Courses = [
     title: "Hybrid AI Digital Marketing",
     into_para:
       "A Hybrid AI Digital Marketing with Graphics Design course opens doors to a world of limitless opportunities in the digital age. By combining AI-driven marketing strategies with creative graphics design, this course equips learners with the skills to create impactful campaigns, analyze data for better decision-making, and design visually compelling content. Candidate can pursue careers as digital marketers, AI marketing specialists, graphic designers, content creators, or social media managers. With businesses increasingly relying on AI and visual storytelling, this hybrid skill set is in high demand across industries like e-commerce, advertising, tech, and media, offering lucrative and future-proof career paths.",
-    sub_title: "The potential of Digital Marketing",
+    sub_title: "Course Designed For",
     image:
-      "https://img.freepik.com/premium-photo/design-studio-creativity-ideas-wood-palette-decoration-concept_53876-44964.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/hybrid ai-01.jpg",
     image2:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/potential-01.jpg",
     image3:
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
-    content:
-      "A Hybrid AI Digital Marketing with Graphics Design course opens doors to a world of limitless opportunities in the digital age. By combining AI-driven marketing strategies with creative graphics design, this course equips learners with the skills to create impactful campaigns, analyze data for better decision-making, and design visually compelling content. Candidate can pursue careers as digital marketers, AI marketing specialists, graphic designers, content creators, or social media managers. With businesses increasingly relying on AI and visual storytelling, this hybrid skill set is in high demand across industries like e-commerce, advertising, tech, and media, offering lucrative and future-proof career paths",
+    content: [
+      "Students",
+      "Working Professionals",
+      "Marketing Enthusiast",
+      "Job Seekers",
+      "Entrepreneurs & Managerial",
+      "Up killers",
+    ],
+    specialties: [
+      "Updated/ High-Quality Syllabus",
+      "Highly Professional Faculties",
+      "Internship with Branded Companies",
+      "100% Placement Assistance",
+    ],
     pros: [
       {
         "Attainable Ability": [
@@ -50,8 +62,19 @@ const Courses = [
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     image3:
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
-    content:
-      "Skilled graphics designer has vast opportunities across industries like advertising, media, e-commerce, gaming, and tech. They can work as brand designers, UI/UX designers, illustrators, or art directors, creating visuals for websites, apps, marketing campaigns, and more. With the rise of digital platforms, the demand for creative professionals is soaring. Freelancing, remote work, and entrepreneurship also offer flexibility. Mastering tools like Adobe Suite and staying updated with design trends ensures a dynamic, rewarding, and future-proof career in the creative industry.",
+    content: [
+      "students and professionals of all ages ",
+      "open to beginners and enthusiasts",
+      "Basic Computer Skills",
+      "Creative Interest",
+      "No Prior Experience Needed",
+    ],
+    specialties: [
+      "Updated/ High-Quality Syllabus",
+      "Highly Professional Faculties",
+      "Internship with Branded Companies",
+      "100% Placement Assistance",
+    ],
     pros: [
       {
         "Obtainable Ability": [
@@ -95,8 +118,18 @@ const Courses = [
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     image3:
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
-    content:
-      "Exedu’s Robotics courses offer a gateway to the future of automation and AI-driven technology. With hands-on training in robotics, students gain expertise in designing, programming, and implementing smart systems. This opens doors to careers in industries like manufacturing, healthcare, aerospace, and entertainment. Opportunities include roles such as Robotics Engineer, AI Specialist, Automation Consultant, and Research Scientist. As industries increasingly adopt robotics for efficiency and innovation, skilled professionals are in high demand. Exedu’s industry-aligned curriculum ensures graduates are equipped to lead in this transformative field, shaping the future of technology and innovation.",
+    content: [
+      "Students",
+      "Working Professionals",
+      "Job Seekers",
+      "Robotics Enthusiasts",
+    ],
+    specialties: [
+      "Updated/ High-Quality Syllabus",
+      "Highly Professional Faculties",
+      "Internship with Branded Companies",
+      "100% Placement Assistance",
+    ],
     pros: [
       {
         "Feasible Expertise": [
@@ -139,8 +172,19 @@ const Courses = [
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     image3:
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
-    content:
-      "Exedu’s Robotics courses offer a gateway to the future of automation and AI-driven technology. With hands-on training in robotics, students gain expertise in designing, programming, and implementing smart systems. This opens doors to careers in industries like manufacturing, healthcare, aerospace, and entertainment. Opportunities include roles such as Robotics Engineer, AI Specialist, Automation Consultant, and Research Scientist. As industries increasingly adopt robotics for efficiency and innovation, skilled professionals are in high demand. Exedu’s industry-aligned curriculum ensures graduates are equipped to lead in this transformative field, shaping the future of technology and innovation.",
+    content: [
+      "Students",
+      "Working Professionals",
+      "Job Seekers",
+      "Fresh Graduates",
+      "Tech Enthusiasts ",
+    ],
+    specialties: [
+      "Updated/ High-Quality Syllabus",
+      "Highly Professional Faculties",
+      "Internship with Branded Companies",
+      "100% Placement Assistance",
+    ],
     pros: [
       {
         high_demand_skills: [
@@ -170,8 +214,20 @@ const Courses = [
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     image3:
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
-    content:
-      "Exedu’s Robotics courses offer a gateway to the future of automation and AI-driven technology. With hands-on training in robotics, students gain expertise in designing, programming, and implementing smart systems. This opens doors to careers in industries like manufacturing, healthcare, aerospace, and entertainment. Opportunities include roles such as Robotics Engineer, AI Specialist, Automation Consultant, and Research Scientist. As industries increasingly adopt robotics for efficiency and innovation, skilled professionals are in high demand. Exedu’s industry-aligned curriculum ensures graduates are equipped to lead in this transformative field, shaping the future of technology and innovation.",
+    content: [
+      "Students",
+      "Working Professionals",
+      "Career Switchers",
+      "Job Seekers",
+      "Entrepreneurs & Startups",
+      "Product Managers",
+    ],
+    specialties: [
+      "Updated/ High-Quality Syllabus",
+      "Highly Professional Faculties",
+      "Internship with Branded Companies",
+      "100% Placement Assistance",
+    ],
     pros: [
       {
         high_demand_career_opportunity: [
@@ -198,8 +254,20 @@ const Courses = [
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
     image3:
       "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
-    content:
-      "Exedu’s Robotics courses offer a gateway to the future of automation and AI-driven technology. With hands-on training in robotics, students gain expertise in designing, programming, and implementing smart systems. This opens doors to careers in industries like manufacturing, healthcare, aerospace, and entertainment. Opportunities include roles such as Robotics Engineer, AI Specialist, Automation Consultant, and Research Scientist. As industries increasingly adopt robotics for efficiency and innovation, skilled professionals are in high demand. Exedu’s industry-aligned curriculum ensures graduates are equipped to lead in this transformative field, shaping the future of technology and innovation.",
+    content: [
+      "Students",
+      "Working Professionals",
+      "Marketing Enthusiast",
+      "Job Seekers",
+      "Entrepreneurs & Managerial",
+      "Up killers",
+    ],
+    specialties: [
+      "Updated/ High-Quality Syllabus",
+      "Highly Professional Faculties",
+      "Internship with Branded Companies",
+      "100% Placement Assistance",
+    ],
     pros: [
       {
         obtainable_capability: [

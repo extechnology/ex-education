@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useImages } from "@/app/hooks/image-hook";
+import Link from "next/link";
 
 const Hero: React.FC = () => {
   const { data, isLoading, error } = useImages();
@@ -28,7 +29,7 @@ const Hero: React.FC = () => {
             Empowering Future-Ready Learning with AI & Innovation!
           </p>
           <button className="bg-blue-700 hover:bg-blue-600 w-36 hover:w-50 hover:rounded-xl hover:shadow transition-all duration-500 text-white font-bold py-2 px-4 rounded-lg">
-            Get Started
+            <Link href="/course">Get Started</Link>
           </button>
         </div>
         <div data-aos="fade-in" className="content-center py-10 md:py-0">

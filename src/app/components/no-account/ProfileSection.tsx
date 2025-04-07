@@ -6,7 +6,7 @@ const ProfileSection = () => {
   return (
     <>
       {/* Animated profile section with particles */}
-      <div className="flex items-center justify-center my-8 relative animate-on-scroll">
+      <div className="flex items-center justify-center mt-8 mb-2 relative animate-on-scroll">
         <div className="absolute w-40 h-40 rounded-full bg-gradient-to-r from-edu-100 to-edu-200 opacity-50 blur-xl animate-pulse-soft"></div>
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -39,9 +39,9 @@ const ProfileSection = () => {
             <UserRound className="w-16 h-16 text-edu-500 relative z-10" />
           </div>
 
-          <div className="absolute -bottom-3 left-0 right-0 text-center text-sm font-medium text-gray-600 bg-white/70 backdrop-blur-sm py-1 rounded-full shadow-md">
+          {/* <div className="absolute -bottom-3 left-0 right-0 text-center text-sm font-medium text-gray-600 bg-white/70 backdrop-blur-sm py-1 rounded-full shadow-md">
             No Account
-          </div>
+          </div> */}
         </motion.div>
       </div>
 
