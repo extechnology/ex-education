@@ -325,7 +325,6 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
               Graduation
             </label>
             <input
-              required
               type="text"
               name="university"
               value={formData.university}
@@ -337,7 +336,6 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
               Stream
             </label>
             <input
-              required
               type="text"
               name="universityMajor"
               value={formData.universityMajor}
@@ -349,7 +347,6 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
               Year of Graduation
             </label>
             <input
-              required
               type="text"
               name="universityYear"
               value={formData.universityYear}
