@@ -60,7 +60,7 @@ const AboutUs: React.FC = () => {
           </h1>
           <p
             data-aos="zoom-in"
-            className="w-[90%] md:text-xl text-lg text-justify"
+            className="w-[90%] md:text-xl text-md text-justify"
           >
             Unlock Your Future with exedu! Master Digital Marketing, Graphics
             Design, Prompt AI, and Robotics. Transform Your Skills, Embrace

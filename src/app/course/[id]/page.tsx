@@ -51,7 +51,7 @@ export default async function CourseDetail({
             <h2 className="text-3xl pt-5 md:pt-0 md:text-4xl font-bold text-pink-600 uppercase leading-tight">
               {course.title}
             </h2>
-            <p className="mt-4 text-gray-700 text-lg text-justify">
+            <p className="mt-4 text-gray-700 text-md md:text-lg text-justify">
               {course.into_para || "Description not available"}
             </p>
           </div>
@@ -67,13 +67,13 @@ export default async function CourseDetail({
           <Image
             src={course.image2}
             alt="no image"
-            className="md:pt-4 md:pb-1 w-full"
+            className="md:pt-4 md:pb-1 w-full  md:w-[400px]"
             height={400}
             width={400}
           />
           <div className="grid md:grid-cols-2 grid-cols-1 gap-10 content-center">
             <div className="content-center px-5 md:px-0">
-              <div className="pt-5 text-gray-700 text-lg text-justify  mx-auto">
+              <div className="pt-5 text-gray-700 text-md md:text-lg text-justify  mx-auto">
                 {Array.isArray(course.content) && (
                   <ul className="list-disc pl-5 content-center space-y-1">
                     {course.content.map((item, index) => (
@@ -87,7 +87,7 @@ export default async function CourseDetail({
               <p className="text-center text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">
                 Our Specialties
               </p>
-              <p className="pt-5 text-gray-700 content-center text-lg text-justify  mx-auto">
+              <p className="pt-5 text-gray-700 content-center text-md md:text-lg text-justify  mx-auto">
                 {Array.isArray(course.specialties) && (
                   <ul className="space-y-3 md:space-y-2 font-medium  content-center">
                     {course.specialties.map((item, index) => (
@@ -112,10 +112,10 @@ export default async function CourseDetail({
             alt="no image"
             height={400}
             width={400}
-            className="md:pl-2  w-full"
+            className="md:pl-2 w-full md:w-[400px]"
           />
 
-          <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:w-[80%] w-[90%] mx-auto py-5">
+          <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:text-lg md:grid-cols-2 lg:grid-cols-3 md:w-[80%] w-[90%] mx-auto py-5">
             {course.pros?.[0] &&
               Object.entries(course.pros[0]).map(([key, skills]) =>
                 Array.isArray(skills)

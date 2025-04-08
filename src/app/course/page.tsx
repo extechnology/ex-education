@@ -20,15 +20,25 @@ function Page() {
             data-aos="zoom-in"
             className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 backdrop-blur-2xl text-slate-100"
           >
-            <h1 className="text-xl font-medium">Advertisements & Promotions</h1>
+            <h1 className="md:text-xl text-lg font-medium">
+              Advertisements & Promotions
+            </h1>
           </div>
-          <div data-aos="zoom-in" className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100">
-            <h1 className="text-xl font-medium">
+          <div
+            data-aos="zoom-in"
+            className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100"
+          >
+            <h1 className="md:text-xl text-lg font-medium">
               Grow & Up Skill Your <br /> Creative Skill
             </h1>
           </div>
-          <div data-aos="zoom-in" className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100">
-            <h1 className="text-xl font-medium">Develop Web & Application</h1>
+          <div
+            data-aos="zoom-in"
+            className="p-5 content-center shadow-2xl rounded-xl bg-blue-900 text-slate-100"
+          >
+            <h1 className="md:text-xl text-lg font-medium">
+              Develop Web & Application
+            </h1>
           </div>
         </div>
       </div>

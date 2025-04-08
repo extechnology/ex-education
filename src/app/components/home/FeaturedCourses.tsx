@@ -118,7 +118,7 @@ const FeaturedCourses: React.FC = () => {
       </div> */}
 
       {/* Grid Layout for Larger Screens */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 gap-y-10 px-4 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-3 pb-5 md:pb-0 gap-5 gap-y-10 px-4 md:px-0">
         {courses.map((course, index) => {
           const detail = courseDetails[index % courseDetails.length]; // Assign color cyclically
 
