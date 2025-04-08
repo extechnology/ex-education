@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import { useUser, SignInButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "../ui/button";
 import {
@@ -15,7 +14,7 @@ import { motion } from "framer-motion";
 import ProfileSection from "./ProfileSection";
 import FeatureSection from "./FeatureSection";
 import ProfileModal from "../profile/ProfileModal"; // Import your modal component
-import { useSignIn, RedirectToSignIn } from "@clerk/clerk-react";
+import {RedirectToSignIn } from "@clerk/clerk-react";
 
 const MainContent = () => {
   const { isSignedIn } = useUser(); // Check user authentication status

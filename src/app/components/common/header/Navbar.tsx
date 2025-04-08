@@ -39,6 +39,7 @@ const Navbar: React.FC = () => {
   const { isSignedIn, user } = useUser();
   const { getToken } = useAuth();
 
+  console.log(profileId)
   useEffect(() => {
     // Retrieve profile ID from localStorage
     const storedProfileId = localStorage.getItem("profileId");
@@ -210,7 +211,6 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           ref={menuRef}
@@ -223,6 +223,7 @@ const Navbar: React.FC = () => {
           className="md:hidden bg-slate-300 p-4 border-slate-300 shadow-lg border-b"
         >
           <ul className="space-y-3">
+            {/* Navigation Links */}
             {navItems.map(({ label, href }) => (
               <li
                 key={href}
@@ -237,50 +238,73 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
             ))}
-            <li className="py-5">
+
+            {/* Profile Toggle Button */}
+            <li className="pt-4">
               <button
-                className="w-full shadow-md rounded-2xl px-3 py-2 bg-gray-100 text-fuchsia-600 border-white block text-center"
-                onClick={() => {
-                  router.push(isSignedIn ? "/profile" : "/no-account");
-                  setIsOpen(false);
-                }}
+                className="w-full shadow-md rounded-2xl px-3 py-2 bg-white text-fuchsia-600 font-medium flex items-center justify-center gap-2"
+                onClick={() => setShowProfilePopup((prev) => !prev)}
               >
+                <User className="w-5" />
                 Profile
               </button>
             </li>
 
-            {/* Authentication Buttons */}
-            <li className="py-2">
-              {isSignedIn ? (
-                <SignOutButton>
-                  <div
-                    className="flex items-center gap-2 px-4 py-2 text-red-600 bg-white shadow-md rounded-md text-center justify-center hover:bg-red-100 transition-all cursor-pointer"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <LogOut size={18} /> Logout
-                  </div>
-                </SignOutButton>
-              ) : (
-                <>
-                  <SignInButton mode="modal">
-                    <div
-                      className="flex items-center gap-2 px-4 py-2 text-gray-700 bg-white shadow-md rounded-md text-center justify-center hover:bg-gray-100 transition-all cursor-pointer"
-                      onClick={() => setIsOpen(false)}
+            {/* Profile Popup Menu (shown when Profile is toggled) */}
+            {showProfilePopup && (
+              <li className="space-y-2 pt-2">
+                {isSignedIn ? (
+                  <>
+                    <button
+                      onClick={() => {
+                        router.push("/profile");
+                        setIsOpen(false);
+                        setShowProfilePopup(false);
+                      }}
+                      className="w-full text-gray-700 bg-white shadow-md rounded-md px-4 py-2 text-center hover:bg-gray-100 transition-all"
                     >
-                      <LogIn size={18} /> Login
-                    </div>
-                  </SignInButton>
-                  <SignUpButton mode="modal">
-                    <div
-                      className="flex items-center gap-2 px-4 py-2 text-gray-700 bg-white shadow-md rounded-md text-center justify-center hover:bg-gray-100 transition-all cursor-pointer mt-2"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <UserPlus size={18} /> Sign Up
-                    </div>
-                  </SignUpButton>
-                </>
-              )}
-            </li>
+                      Go to Profile
+                    </button>
+                    <SignOutButton>
+                      <div
+                        className="flex items-center gap-2 justify-center px-4 py-2 text-red-600 bg-white shadow-md rounded-md hover:bg-red-100 transition-all cursor-pointer"
+                        onClick={() => {
+                          setIsOpen(false);
+                          setShowProfilePopup(false);
+                        }}
+                      >
+                        <LogOut size={18} /> Logout
+                      </div>
+                    </SignOutButton>
+                  </>
+                ) : (
+                  <>
+                    <SignInButton mode="modal">
+                      <div
+                        className="flex items-center gap-2 justify-center px-4 py-2 text-gray-700 bg-white shadow-md rounded-md hover:bg-gray-100 transition-all cursor-pointer"
+                        onClick={() => {
+                          setIsOpen(false);
+                          setShowProfilePopup(false);
+                        }}
+                      >
+                        <LogIn size={18} /> Login
+                      </div>
+                    </SignInButton>
+                    <SignUpButton mode="modal">
+                      <div
+                        className="flex items-center gap-2 justify-center px-4 py-2 text-gray-700 bg-white shadow-md rounded-md hover:bg-gray-100 transition-all cursor-pointer"
+                        onClick={() => {
+                          setIsOpen(false);
+                          setShowProfilePopup(false);
+                        }}
+                      >
+                        <UserPlus size={18} /> Sign Up
+                      </div>
+                    </SignUpButton>
+                  </>
+                )}
+              </li>
+            )}
           </ul>
         </motion.div>
       )}

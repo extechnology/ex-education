@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaUser, FaBell } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import Image from "next/image";
 import AttendanceTracker from "../../components/profile/Attendance";
@@ -41,12 +41,13 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const params = useParams();
   const userId = params?.id;
-
+ 
+  console.log(loading)
   useEffect(() => {
     const fetchProfile = async () => {
       try {
         const res = await fetch(
-          `http://127.0.0.1:8000/api/profiles/${userId}/`
+          `https://server.exedu.in/api/profiles/${userId}/`
         );
         const data = await res.json();
         setProfile(data);

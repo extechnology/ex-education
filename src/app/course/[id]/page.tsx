@@ -67,7 +67,7 @@ export default async function CourseDetail({
           <Image
             src={course.image2}
             alt="no image"
-            className="rounded-lg md:pt-4 md:pb-1 "
+            className="md:pt-4 md:pb-1 "
             height={400}
             width={400}
           />

@@ -119,7 +119,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
 
   const { user } = useUser();
     const userId = user?.id;
-
+  console.log(setSuccessMessage)
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const data = new FormData();

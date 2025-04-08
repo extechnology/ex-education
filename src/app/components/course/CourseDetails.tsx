@@ -10,7 +10,7 @@ const Courses = [
     image2:
       "/potential-01.jpg",
     image3:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/learn-01.jpg",
     content: [
       "Students",
       "Working Professionals",
@@ -57,11 +57,11 @@ const Courses = [
       "A Hybrid AI Digital Marketing with Graphics Design course opens doors to a world of limitless opportunities in the digital age. By combining AI-driven marketing strategies with creative graphics design, this course equips learners with the skills to create impactful campaigns, analyze data for better decision-making, and design visually compelling content. Candidate can pursue careers as digital marketers, AI marketing specialists, graphic designers, content creators, or social media managers. With businesses increasingly relying on AI and visual storytelling, this hybrid skill set is in high demand across industries like e-commerce, advertising, tech, and media, offering lucrative and future-proof career paths.",
     sub_title: "Breakthroughs for Graphics Designers",
     image:
-      "https://img.freepik.com/premium-photo/design-studio-creativity-ideas-wood-palette-decoration-concept_53876-44964.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/GD hybrid-01.jpg",
     image2:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/gd learn.jpg",
     image3:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/gd potential-01.jpg",
     content: [
       "students and professionals of all ages ",
       "open to beginners and enthusiasts",
@@ -113,11 +113,11 @@ const Courses = [
       "Exedu’s Robotics courses offer a gateway to the future of automation and AI-driven technology. With hands-on training in robotics, students gain expertise in designing, programming, and implementing smart systems. This opens doors to careers in industries like manufacturing, healthcare, aerospace, and entertainment. Opportunities include roles such as Robotics Engineer, AI Specialist, Automation Consultant, and Research Scientist. As industries increasingly adopt robotics for efficiency and innovation, skilled professionals are in high demand. Exedu’s industry-aligned curriculum ensures graduates are equipped to lead in this transformative field, shaping the future of technology and innovation.",
     sub_title: "Scopes & opportunity ",
     image:
-      "https://img.freepik.com/premium-photo/design-studio-creativity-ideas-wood-palette-decoration-concept_53876-44964.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/robotics hybrid-01.jpg",
     image2:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/robotics learn-01.jpg",
     image3:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/robotics potential-01.jpg",
     content: [
       "Students",
       "Working Professionals",
@@ -167,11 +167,11 @@ const Courses = [
       "Exed's 3-Month Web & App Development program is a comprehensive, hands-on course designed to equip learners with the skills needed to excel in the tech industry. This intensive program covers front-end and back-end development, UI/UX design, and mobile app creation using the latest tools and technologies. Participants gain practical experience through real-world projects and a dedicated internship, ensuring they are job-ready upon completion. With expert mentorship, industry-aligned curriculum, and a focus on practical application, this program is ideal for aspiring developers looking to build a strong foundation and kickstart their careers in web and app development.",
     sub_title: "Scopes & opportunity ",
     image:
-      "https://img.freepik.com/premium-photo/design-studio-creativity-ideas-wood-palette-decoration-concept_53876-44964.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/web&app hybrid-01.jpg",
     image2:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/web&app learn-01.jpg",
     image3:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/web&app potential-01.jpg",
     content: [
       "Students",
       "Working Professionals",
@@ -209,11 +209,11 @@ const Courses = [
       "Exed’s 3-Month UI/UX Design course is a focused program designed to transform beginners into skilled designers. Learn the fundamentals of user interface and experience design, wireframing, prototyping, and tools like Figma and Adobe XD. Through hands-on projects, you’ll create visually appealing and user-friendly designs. With expert mentorship and industry-aligned training, this course prepares you for roles like UI/UX designer, product designer, or interaction designer. Gain practical experience, build a strong portfolio, and kickstart your career in the fast-growing field of design. Perfect for aspiring designers seeking a structured, career-focused learning path",
     sub_title: "Scopes & opportunity ",
     image:
-      "https://img.freepik.com/premium-photo/design-studio-creativity-ideas-wood-palette-decoration-concept_53876-44964.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/uiux hybrid-01.jpg",
     image2:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/uiux learn-01.jpg",
     image3:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/uiux potential-01.jpg",
     content: [
       "Students",
       "Working Professionals",
@@ -249,11 +249,11 @@ const Courses = [
       "Our Video Editing course is a hands-on program designed to teach you the art of storytelling through video. Learn industry-standard tools like Adobe Premiere Pro, Final Cut Pro, and After Effects, and master techniques like cutting, transitions, color grading, and sound design. Whether you’re a beginner or looking to refine your skills, this course equips you to create professional-quality videos for films, social media, marketing, and more.Video editing skills open doors to careers in film, media, advertising, and content creation. With high demand for skilled editors, you can work as a freelance editor, in production houses, or for digital platforms. Build a strong portfolio, stay ahead with trending techniques, and unlock opportunities in the booming creative industry.",
     sub_title: "Scopes & opportunity ",
     image:
-      "https://img.freepik.com/premium-photo/design-studio-creativity-ideas-wood-palette-decoration-concept_53876-44964.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/video hybrid-01.jpg",
     image2:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/video learn-01.jpg",
     image3:
-      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1208105082.1712396076&semt=ais_hybrid",
+      "/video potential-01.jpg",
     content: [
       "Students",
       "Working Professionals",

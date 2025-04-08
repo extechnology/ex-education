@@ -67,7 +67,7 @@ export default function Form({ course }: FormProps) {
     if (!validateForm()) return;
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/enroll_form/", {
+      const response = await fetch("https://server.exedu.in/api/enroll_form/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

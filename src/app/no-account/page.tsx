@@ -67,7 +67,7 @@ const NoAccount = () => {
     };
 
     checkProfile();
-  }, [isSignedIn, user]);
+  }, [isSignedIn, user, getToken, router]);
 
   return (
     <div
