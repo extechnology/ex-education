@@ -259,66 +259,93 @@ const Navbar: React.FC = () => {
             <li className="pt-4">
               <button
                 className="w-full shadow-md rounded-2xl px-3 py-2 bg-white text-fuchsia-600 font-medium flex items-center justify-center gap-2"
-                onClick={() => setShowProfilePopup((prev) => !prev)}
+                onClick={async () => {
+                  if (!isSignedIn) {
+                    router.push("/no-account");
+                    setIsOpen(false);
+                    return;
+                  }
+
+                  try {
+                    const token = await getToken();
+                    const clerkUserId = user?.id;
+
+                    const response = await fetch(
+                      `${process.env.NEXT_PUBLIC_API_URL}/api/profiles/me/`,
+                      {
+                        method: "GET",
+                        headers: {
+                          "Content-Type": "application/json",
+                          "Clerk-User-Id": clerkUserId ?? "",
+                          Authorization: `Bearer ${token}`,
+                        },
+                      }
+                    );
+
+                    if (response.ok) {
+                      const data = await response.json();
+                      const profileId = data.id;
+                      localStorage.setItem("profileId", profileId);
+                      router.push(`/profile/${profileId}`);
+                    } else {
+                      router.push("/no-account");
+                    }
+                  } catch (error) {
+                    console.error("Error checking profile:", error);
+                    router.push("/no-account");
+                  } finally {
+                    setIsOpen(false);
+                    setShowProfilePopup(false);
+                  }
+                }}
               >
                 <User className="w-5" />
                 Profile
               </button>
             </li>
 
-            {/* Profile Popup Menu (shown when Profile is toggled) */}
-            {showProfilePopup && (
+            {/* Login/Signup for unsigned users */}
+            {!isSignedIn && (
               <li className="space-y-2 pt-2">
-                {isSignedIn ? (
-                  <>
-                    <button
-                      onClick={() => {
-                        router.push("/profile");
-                        setIsOpen(false);
-                        setShowProfilePopup(false);
-                      }}
-                      className="w-full text-gray-700 bg-white shadow-md rounded-md px-4 py-2 text-center hover:bg-gray-100 transition-all"
-                    >
-                      Go to Profile
-                    </button>
-                    <SignOutButton>
-                      <div
-                        className="flex items-center gap-2 justify-center px-4 py-2 text-red-600 bg-white shadow-md rounded-md hover:bg-red-100 transition-all cursor-pointer"
-                        onClick={() => {
-                          setIsOpen(false);
-                          setShowProfilePopup(false);
-                        }}
-                      >
-                        <LogOut size={18} /> Logout
-                      </div>
-                    </SignOutButton>
-                  </>
-                ) : (
-                  <>
-                    <SignInButton mode="modal">
-                      <div
-                        className="flex items-center gap-2 justify-center px-4 py-2 text-gray-700 bg-white shadow-md rounded-md hover:bg-gray-100 transition-all cursor-pointer"
-                        onClick={() => {
-                          setIsOpen(false);
-                          setShowProfilePopup(false);
-                        }}
-                      >
-                        <LogIn size={18} /> Login
-                      </div>
-                    </SignInButton>
-                    <SignUpButton mode="modal">
-                      <div
-                        className="flex items-center gap-2 justify-center px-4 py-2 text-gray-700 bg-white shadow-md rounded-md hover:bg-gray-100 transition-all cursor-pointer"
-                        onClick={() => {
-                          setIsOpen(false);
-                          setShowProfilePopup(false);
-                        }}
-                      >
-                        <UserPlus size={18} /> Sign Up
-                      </div>
-                    </SignUpButton>
-                  </>
-                )}
+                <SignInButton mode="modal">
+                  <div
+                    className="flex items-center gap-2 justify-center px-4 py-2 text-gray-700 bg-white shadow-md rounded-md hover:bg-gray-100 transition-all cursor-pointer"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setShowProfilePopup(false);
+                    }}
+                  >
+                    <LogIn size={18} /> Login
+                  </div>
+                </SignInButton>
+                <SignUpButton mode="modal">
+                  <div
+                    className="flex items-center gap-2 justify-center px-4 py-2 text-gray-700 bg-white shadow-md rounded-md hover:bg-gray-100 transition-all cursor-pointer"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setShowProfilePopup(false);
+                    }}
+                  >
+                    <UserPlus size={18} /> Sign Up
+                  </div>
+                </SignUpButton>
+              </li>
+            )}
+
+            {/* Logout for signed-in users */}
+            {isSignedIn && (
+              <li className="pt-2">
+                <SignOutButton>
+                  <div
+                    className="flex items-center gap-2 justify-center px-4 py-2 text-red-600 bg-white shadow-md rounded-md hover:bg-red-100 transition-all cursor-pointer"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setShowProfilePopup(false);
+                    }}
+                  >
+                    <LogOut size={18} /> Logout
+                  </div>
+                </SignOutButton>
               </li>
             )}
           </ul>

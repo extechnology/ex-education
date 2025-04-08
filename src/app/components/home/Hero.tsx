@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             <span className="text-fuchsia-700">Hybrid AI</span> Education
             Platform
           </h1>
-          <p data-aos="zoom-in-up" className="text-xl">
+          <p data-aos="zoom-in-up" className="md:text-xl">
             Empowering Future-Ready Learning with AI & Innovation!
           </p>
           <button className="bg-blue-700 hover:bg-blue-600 w-36 hover:w-50 hover:rounded-xl hover:shadow transition-all duration-500 text-white font-bold py-2 px-4 rounded-lg">

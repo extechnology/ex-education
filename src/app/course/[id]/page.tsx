@@ -87,7 +87,7 @@ export default async function CourseDetail({
               <p className="text-center text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">
                 Our Specialties
               </p>
-              <p className="pt-5 text-gray-700 content-center text-md md:text-lg text-justify  mx-auto">
+              <div className="pt-5 text-gray-700 content-center text-md md:text-lg text-justify  mx-auto">
                 {Array.isArray(course.specialties) && (
                   <ul className="space-y-3 md:space-y-2 font-medium  content-center">
                     {course.specialties.map((item, index) => (
@@ -95,7 +95,7 @@ export default async function CourseDetail({
                     ))}
                   </ul>
                 )}
-              </p>
+              </div>
             </div>
           </div>
         </div>
