@@ -118,14 +118,14 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
   const [successMessage, setSuccessMessage] = useState("");
 
   const { user } = useUser();
-    const userId = user?.id;
-  console.log(setSuccessMessage)
+  const userId = user?.id;
+  console.log(setSuccessMessage);
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const data = new FormData();
 
     data.append("phone_number", formData.phoneNumber || "");
-    data.append("name",formData.name || "");
+    data.append("name", formData.name || "");
     data.append("email", formData.email || "");
     data.append("secondary_school", formData.secondarySchool || "");
     data.append("secondary_year", formData.secondaryYear || "");
@@ -143,7 +143,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
 
     try {
       const profileResponse = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/profiles/`,
+        `https://server.exedu.in/api/profiles/`,
         {
           method: "POST",
           body: data,
@@ -153,8 +153,6 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
           },
         }
       );
-
-
 
       if (!profileResponse.ok) {
         const errorData = await profileResponse.json();
@@ -169,9 +167,8 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
 
       if (profileId) {
         localStorage.setItem("profileId", String(profileId));
-        router.replace(`/profile/${profileId}`); 
+        router.replace(`/profile/${profileId}`);
       }
-
 
       for (const certificate of formData.certificates) {
         if (certificate.file) {
@@ -180,7 +177,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
           certData.append("file", certificate.file);
           certData.append("description", certificate.description || "");
 
-          await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/certificates/`, {
+          await fetch(`https://server.exedu.in/api/certificates/`, {
             method: "POST",
             body: certData,
             credentials: "include",

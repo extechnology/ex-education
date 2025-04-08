@@ -43,7 +43,7 @@ const NoAccount = () => {
         const clerkUserId = user.id;
 
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/profiles/me/`,
+          `https://server.exedu.in/api/profiles/me/`,
           {
             method: "GET",
             headers: {

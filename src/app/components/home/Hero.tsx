@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   )?.image;
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-200 pt-20 md:px-10 lg:px-0">
+    <div className="bg-[linear-gradient(to_bottom,white_80%,#f9a8d4_100%)] pt-20 md:px-10 lg:px-0">
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl text-gray-800 pt-14">
         <div className="content-center space-y-6 px-3 md:px-0">
           <h1
