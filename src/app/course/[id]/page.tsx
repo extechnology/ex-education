@@ -63,11 +63,11 @@ export default async function CourseDetail({
         <h1 className="text-4xl font-bold text-white text-center p-5 bg-gradient-to-r from-violet-500 to-fuchsia-500">
           {course.sub_title}
         </h1>
-        <div className="md:flex gap-5 md:px-5">
+        <div className="md:flex md:gap-5 md:px-5">
           <Image
             src={course.image2}
             alt="no image"
-            className="md:pt-4 md:pb-1 "
+            className="md:pt-4 md:pb-1 w-full"
             height={400}
             width={400}
           />
@@ -84,7 +84,9 @@ export default async function CourseDetail({
               </div>
             </div>
             <div className="bg-gradient-to-r from-gray-100 to-gray-200 mt-5 mx-3 md:mx-0 p-5 rounded-2xl">
-              <p className="text-center text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">Our Specialties</p>
+              <p className="text-center text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">
+                Our Specialties
+              </p>
               <p className="pt-5 text-gray-700 content-center text-lg text-justify  mx-auto">
                 {Array.isArray(course.specialties) && (
                   <ul className="space-y-3 md:space-y-2 font-medium  content-center">
@@ -110,7 +112,7 @@ export default async function CourseDetail({
             alt="no image"
             height={400}
             width={400}
-            className="md:pl-2"
+            className="md:pl-2  w-full"
           />
 
           <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:w-[80%] w-[90%] mx-auto py-5">

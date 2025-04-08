@@ -68,7 +68,22 @@ const Navbar: React.FC = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+        setShowProfilePopup(false);
+      }
+    };
 
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleProfileClick = async () => {
     if (!isSignedIn) {
@@ -211,6 +226,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           ref={menuRef}
