@@ -77,7 +77,7 @@ function Contact() {
         <div>
           <h1
             data-aos="flip-up"
-            className="text-center font-bold md:text-5xl text-3xl text-gray-800 pb-5"
+            className="text-center font-medium md:text-4xl text-2xl text-gray-800 pb-5"
           >
             Contact Now at{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">

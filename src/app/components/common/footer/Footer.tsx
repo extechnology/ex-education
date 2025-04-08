@@ -15,10 +15,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const Footer: React.FC = () => {
   const [showPopup,setShowPopup] = useState(false)
   return (
-    <div className="bg-gradient-to-r  from-slate-800 to-slate-900 text-white pt-10 pb-7 shadow-t-2xl">
+    <div className="bg-gradient-to-r  from-slate-800 to-slate-900 text-white pt-10 pb-5 shadow-t-2xl">
       <div className="grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto px-5 space-y-8 md:space-y-0">
         <div>
-          <h1 className="font-bold md:text-3xl text-2xl">Quick Links</h1>
+          <h1 className="font-medium text-xl">Quick Links</h1>
           <ul className="space-y-2 pt-4">
             <Link href={"/"}>
               <li>Home</li>
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <div>
-          <h1 className="font-bold md:text-3xl text-2xl">Contact</h1>
+          <h1 className="font-medium text-xl">Contact</h1>
           <ul className="space-y-2 pt-4">
             <li>Room No: 20/884,</li>
             <li>Opposite Bus Stand,</li>
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <div>
-          <h1 className="font-bold md:text-3xl text-2xl">Follow Us</h1>
+          <h1 className="font-medium text-xl">Follow Us</h1>
           <ul className="flex space-x-5 pt-4">
             <li>
               <Link href="https://www.instagram.com/exedu_/">
@@ -97,11 +97,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 md:space-y-0">
           <div className="">
             {/* <Image src="/EX_TECHNOLOGY_LOGO-01.png" alt="" height={70} width={70} /> */}
-            <p>Our Parent Company is exmedia</p>
+            <p className="text-sm font-light">Our Parent Company is exmedia</p>
           </div>
           <div className="relative flex md:justify-center">
             <p
-              className="cursor-pointer hover:text-gray-300 transition-all"
+              className="cursor-pointer hover:text-gray-300 transition-all text-sm font-light"
               onMouseEnter={() => setShowPopup(true)}
               onMouseLeave={() => setShowPopup(false)}
             >
@@ -137,7 +137,7 @@ const Footer: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          <div className="flex md:justify-end gap-1">
+          <div className="flex md:justify-end text-sm font-light gap-1">
             <div>
               <Link href={"/privacy"}>Privacy Policy |</Link>
             </div>

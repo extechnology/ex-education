@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
   )?.image;
 
   return (
-    <div className="bg-gradient-to-b from-white pt-20 md:px-10 lg:px-0">
-      <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl text-gray-800 lg:py-14 md:py-10 py-10">
+    <div className="bg-gradient-to-b from-white to-gray-200 pt-20 md:px-10 lg:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl text-gray-800 pt-14">
         <div className="content-center space-y-6 px-3 md:px-0">
           <h1
             data-aos="flip-down"
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             <Link href="/course">Get Started</Link>
           </button>
         </div>
-        <div data-aos="fade-in" className="content-center py-10 md:py-0">
+        <div data-aos="fade-in" className="content-center pt-10 md:py-0">
           <div className="flex justify-end">
             {heroImage ? (
               <Image

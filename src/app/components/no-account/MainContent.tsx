@@ -79,9 +79,9 @@ const MainContent = () => {
               >
                 <Button
                   onClick={handleCreateProfileClick}
-                  className="bg-gradient-to-r  shadow-lg from-gray-100 hover:text-white  to-gray-50 text-black font-medium rounded-full px-8 py-6 hover:shadow-lg h-auto group relative overflow-hidden"
+                  className="bg-gradient-to-r  shadow-lg   from-violet-400 to-fuchsia-600 hover:text-gray-800    text-white font-medium rounded-full px-8 py-6 hover:shadow-lg h-auto group relative overflow-hidden"
                 >
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-violet-400 to-fuchsia-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 to-gray-50  opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   <div className="flex items-center gap-2  relative z-10">
                     Create Your Profile
                     <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />

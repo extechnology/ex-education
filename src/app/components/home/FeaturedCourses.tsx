@@ -136,7 +136,7 @@ const FeaturedCourses: React.FC = () => {
                 className="rounded-t-lg"
               />
               <div
-                className={`relative w-36 bottom-8 left-0 rounded-tr-2xl opacity-90 text-white px-2 py-1 ${detail.color}`}
+                className={`relative w-36 bottom-8 left-0 rounded-tr-2xl opacity-90 text-white px-2 py-1 ${detail.color} shining-text `}
               >
                 Recommended
               </div>

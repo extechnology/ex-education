@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const API_URL =  "https://server.exedu.in";
+const API_URL = "https://server.exedu.in";
 
 // Define TypeScript interface
 interface Course {
@@ -27,7 +27,7 @@ function FeaturedCourse2() {
         const data: Course[] = await response.json();
         console.log(data, "courses");
 
- // Move log before updating state
+        // Move log before updating state
         setCourses(data);
       } catch (err) {
         console.error("Error fetching courses:", err);
@@ -44,13 +44,14 @@ function FeaturedCourse2() {
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
   return (
-    <div className="max-w-6xl mx-auto space-y-5 pb-10 md:px-10 lg:px-0">
-      <h1 className="font-bold md:text-4xl text-3xl px-5 md:px-0 text-center md:text-start pb-3">
-        Our <span className="text-fuchsia-700">Advanced</span> Courses
-      </h1>
+    <div className="max-w-6xl mx-auto space-y-5 pb-10 pt-10 md:px-10 lg:px-0">
+      <span className="bg-gray-100">
+        <h1 className="font-bold relative md:text-4xl text-3xl pb-7 px-5  md:px-0 text-center md:text-start shining-text">
+          Our <span className="text-fuchsia-700 ">Advanced</span> Courses
+        </h1>
+      </span>
 
       {courses.map((course) => (
-        
         <div
           key={course.id}
           className="md:flex gap-5 space-y-6 px-5 md:px-0"
@@ -80,7 +81,7 @@ function FeaturedCourse2() {
               </span>
             </h1>
 
-            <h2 className="md:font-bold text-2xl text-slate-700 py-4">
+            <h2 className="md:font-medium text-2xl text-slate-700 py-4">
               {course.sub_title}
             </h2>
             <p className="text-slate-600 md:text-xl text-pretty text-md text-justify">
