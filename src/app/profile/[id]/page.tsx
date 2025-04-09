@@ -208,7 +208,7 @@ const Dashboard = () => {
                       Class Start Date: 20/04/2025{/* Start Date */}
                     </p>
                   </div>
-                  <div className="content-center md:pt-0">
+                  <div className="content-center pt-4 md:pt-0">
                     <Image
                       src={"/online-test.png"}
                       alt="no image"
