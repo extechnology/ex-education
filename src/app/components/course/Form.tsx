@@ -181,7 +181,7 @@ export default function Form({ course }: FormProps) {
               Chat With Course Counselor
             </a>
             <a
-              href={isFormSubmitted ? "/cv.pdf" : "#"}
+              href={isFormSubmitted ? "#" : "#"}
               download="Course-Brochure.pdf"
               onClick={handleBrochureDownload}
               className="hover:underline relative"

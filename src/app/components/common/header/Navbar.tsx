@@ -177,7 +177,7 @@ const Navbar: React.FC = () => {
           >
             {/* Profile Button - Click to Navigate */}
             <div
-              className="flex items-center text-lg rounded-full border-2 px-3 py-1 shadow border-gray-300 font-medium text-slate-600 cursor-pointer"
+              className="flex items-center text-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full border-2 px-4 py-1 shadow border-gray-300 font-medium text-white cursor-pointer"
               onClick={handleProfileClick}
             >
               <User className="mr-2 w-5" />

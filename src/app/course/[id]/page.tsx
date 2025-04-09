@@ -2,6 +2,8 @@ import Courses from "@/app/components/course/CourseDetails";
 import Form from "@/app/components/course/Form";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { FaCheckCircle } from "react-icons/fa";
+import Link from "next/link";
 
 export default async function CourseDetail({
   params,
@@ -14,6 +16,8 @@ export default async function CourseDetail({
 
   const courseId = resolvedParams.id;
   const course = Courses.find((c) => c.id.toString() === courseId);
+  const phoneNumber = "9072123466";
+  const message = encodeURIComponent("Hello, I'm interested in the courses!");
 
   if (!course) return notFound();
 
@@ -48,7 +52,7 @@ export default async function CourseDetail({
           </div>
           {/* ✅ Text Content */}
           <div className="relative z-10 w-full md:w-1/2 text-left md:pl-12">
-            <h2 className="text-3xl pt-5 md:pt-0 md:text-4xl font-bold text-pink-600 uppercase leading-tight">
+            <h2 className="text-3xl pt-5 md:pt-0 md:text-4xl font-semibold text-pink-600 uppercase leading-tight">
               {course.title}
             </h2>
             <p className="mt-4 text-gray-700 text-md md:text-lg text-justify">
@@ -60,14 +64,14 @@ export default async function CourseDetail({
 
       {/* ✅ Course Subtitle */}
       <div className="max-w-7xl mx-auto md:mt-5">
-        <h1 className="text-4xl font-bold text-white text-center p-5 bg-gradient-to-r from-violet-500 to-fuchsia-500">
+        <h1 className="text-4xl font-medium text-white text-center py-2 bg-gradient-to-r from-violet-500 to-fuchsia-500">
           {course.sub_title}
         </h1>
         <div className="md:flex md:gap-5 md:px-5">
           <Image
             src={course.image2}
             alt="no image"
-            className="md:pt-4 md:pb-1 w-full  md:w-[400px]"
+            className="md:pt-4 md:pb-1 w-full  md:w-[400px] content-center"
             height={400}
             width={400}
           />
@@ -75,16 +79,22 @@ export default async function CourseDetail({
             <div className="content-center px-5 md:px-0">
               <div className="pt-5 text-gray-700 text-md md:text-lg text-justify  mx-auto">
                 {Array.isArray(course.content) && (
-                  <ul className="list-disc pl-5 content-center space-y-1">
+                  <ul className="space-y-2">
                     {course.content.map((item, index) => (
-                      <li key={index}>{item}</li>
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-gray-800"
+                      >
+                        <FaCheckCircle className="text-green-500 mt-1" />
+                        <span>{item}</span>
+                      </li>
                     ))}
                   </ul>
                 )}
               </div>
             </div>
             <div className="bg-gradient-to-r from-gray-100 to-gray-200 mt-5 mx-3 md:mx-0 p-5 rounded-2xl">
-              <p className="text-center text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">
+              <p className="text-center text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r  from-fuchsia-600 to-pink-600">
                 Our Specialties
               </p>
               <div className="pt-5 text-gray-700 content-center text-md md:text-lg text-justify  mx-auto">
@@ -103,30 +113,44 @@ export default async function CourseDetail({
 
       {/* ✅ What You'll Learn */}
       <div className="max-w-7xl mx-auto mt-5">
-        <h3 className="text-4xl font-bold text-white text-center p-5 bg-gradient-to-r from-violet-500 to-fuchsia-500">
+        <h3 className="text-4xl font-medium text-white text-center py-2 bg-gradient-to-r from-violet-500 to-fuchsia-500">
           What You&apos;ll Learn:
         </h3>
-        <div className="md:flex gap-5 md:p-5">
+        <div className="md:flex gap-8 md:px-5 items-center pb-5">
           <Image
             src={course.image3}
-            alt="no image"
+            alt="Course image"
             height={400}
             width={400}
-            className="md:pl-2 w-full md:w-[400px]"
+            className="w-full md:w-[400px] md:pt-5  shadow-lg content-center"
           />
 
-          <ul className="mt-2 list-disc list-inside grid grid-cols-1 md:text-lg md:grid-cols-2 lg:grid-cols-3 md:w-[80%] w-[90%] mx-auto py-5">
+          <ul className="grid gap-2 md:text-lg grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full md:w-[90%] my-6 px-5 md:px-0">
             {course.pros?.[0] &&
               Object.entries(course.pros[0]).map(([key, skills]) =>
                 Array.isArray(skills)
                   ? skills.map((skill: string) => (
-                      <li key={`${key}-${skill}`} className="text-gray-700">
-                        {skill}
+                      <li
+                        key={`${key}-${skill}`}
+                        className="flex items-start gap-1 text-gray-800"
+                      >
+                        <FaCheckCircle className="text-green-500 mt-1" />
+                        <span>{skill}</span>
                       </li>
                     ))
                   : null
               )}
           </ul>
+        </div>
+        <div className="flex justify-center pb-10 pt-5">
+          <Link
+            href={`https://wa.me/${phoneNumber}?text=${message}`}
+            target="_blank"
+          >
+            <button className="px-5 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-fuchsia-500 hover:to-violet-500 transition-all duration-300 hover:scale-110 rounded-full shadow-lg hover:shadow-xl text-white text-md">
+              Chat With The Course Counselor Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

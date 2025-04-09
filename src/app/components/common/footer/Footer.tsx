@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto px-5 space-y-8 md:space-y-0">
         <div>
           <h1 className="font-medium text-xl">Quick Links</h1>
-          <ul className="space-y-2 pt-4">
+          <ul className="space-y-2 text-sm pt-4">
             <Link href={"/"}>
               <li>Home</li>
             </Link>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         </div>
         <div>
           <h1 className="font-medium text-xl">Contact</h1>
-          <ul className="space-y-2 pt-4">
+          <ul className="space-y-2 pt-4 text-sm">
             <li>Room No: 20/884,</li>
             <li>Opposite Bus Stand,</li>
             <li>Ramanattukara, Kozhikode</li>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           <h1 className="font-medium text-xl">Follow Us</h1>
           <ul className="flex space-x-5 pt-4">
             <li>
-              <Link href="https://www.instagram.com/exedu_/">
+              <Link href="https://www.instagram.com/exedu.in?igsh=bnFpeDk5b2tucWZq">
                 <FaInstagram className="w-6 h-6" />
               </Link>
             </li>
@@ -85,8 +85,8 @@ const Footer: React.FC = () => {
             <Image
               src="/ex edu logo-03.png"
               alt="logo"
-              width={250}
-              height={250}
+              width={200}
+              height={200}
               className=""
             />
           </div>

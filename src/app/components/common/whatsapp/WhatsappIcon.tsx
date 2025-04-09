@@ -10,7 +10,7 @@ const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const popupRef = useRef<HTMLDivElement>(null);
   const phoneNumber = "9072123466"; 
-  const message = encodeURIComponent("Hello, I'm interested in your products!");
+  const message = encodeURIComponent("Hello, I'm interested in the courses!");
 
   // Close the popup when clicking outside
   useEffect(() => {

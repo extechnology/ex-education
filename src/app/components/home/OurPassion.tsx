@@ -47,20 +47,20 @@ const AboutUs: React.FC = () => {
 
         {/* Text Section */}
         <div className="text-gray-800 content-center space-y-5  md:px-0">
-          <p data-aos="zoom-in-down" className="text-xl font-semibold">
+          <p data-aos="zoom-in-down" className="text-xl font-medium">
             <span className="bg-zinc-100 text-fuchsia-600 px-2 py-1 rounded-lg">
               Our Passion
             </span>
           </p>
           <h1
             data-aos="zoom-in-up"
-            className="font-bold md:text-4xl text-2xl w-[90%]"
+            className="font-light md:text-4xl text-2xl w-[90%]"
           >
             Transform Your Passion into Profession, Join With Us
           </h1>
           <p
             data-aos="zoom-in"
-            className="w-[90%] md:text-xl text-md text-justify"
+            className="w-[90%]  text-md text-justify"
           >
             Unlock Your Future with exedu! Master Digital Marketing, Graphics
             Design, Prompt AI, and Robotics. Transform Your Skills, Embrace
@@ -70,7 +70,7 @@ const AboutUs: React.FC = () => {
           <Link href={"/contact"} className="">
             <button
               data-aos="zoom-in-up"
-              className="py-2 px-3 rounded-xl w-42 hover:w-58 transition-all duration-500 font-bold hover:bg-fuchsia-700 bg-fuchsia-600 text-white"
+              className="py-2 px-3 rounded-xl w-42 hover:w-58 transition-all duration-500 font-medium hover:bg-fuchsia-700 bg-fuchsia-600 text-white"
             >
               For More Queries
             </button>

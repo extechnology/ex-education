@@ -14,12 +14,12 @@ const Hero: React.FC = () => {
   )?.image;
 
   return (
-    <div className="bg-[linear-gradient(to_bottom,white_80%,#f9a8d4_100%)] pt-20 md:px-10 lg:px-0">
+    <div className="bg-[linear-gradient(to_bottom,white_80%,#f9a8d4_100%)] pt-20 md:px-10 lg:px-0 ">
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl text-gray-800 pt-14">
         <div className="content-center space-y-6 px-3 md:px-0">
           <h1
             data-aos="flip-down"
-            className="text-5xl md:text-6xl font-bold leading-14 md:leading-16"
+            className="text-5xl md:text-6xl font-semibold leading-14 md:leading-16"
           >
             Kerala&apos;s Leading{" "}
             <span className="text-fuchsia-700">Hybrid AI</span> Education
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           <p data-aos="zoom-in-up" className="md:text-xl">
             Empowering Future-Ready Learning with AI & Innovation!
           </p>
-          <button className="bg-blue-700 hover:bg-blue-600 w-36 hover:w-50 hover:rounded-xl hover:shadow transition-all duration-500 text-white font-bold py-2 px-4 rounded-lg">
+          <button className="bg-blue-700 hover:bg-blue-600 w-36 hover:w-50 hover:rounded-xl hover:shadow transition-all duration-500 text-white font-medium py-2 px-4 rounded-lg">
             <Link href="/course">Get Started</Link>
           </button>
         </div>
@@ -40,6 +40,7 @@ const Hero: React.FC = () => {
                 width={540}
                 height={540}
                 alt="Hero Section Image"
+                className="relative"
               />
             ) : (
               <p>No image available</p>

@@ -107,7 +107,7 @@ const Dashboard = () => {
             {/* <FaBell className="text-gray-600" /> */}
             <div className="flex items-center space-x-2">
               <Image
-                src="/man.png"
+                src={profile?.profile_image || "/man.png"}
                 alt="Profile"
                 className="h-10 w-10 rounded-full object-cover"
                 width={40}
