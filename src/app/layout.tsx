@@ -19,16 +19,16 @@ export const metadata: Metadata = {
     "Join Ex Edu for expert-led training in AI-powered digital marketing and gain in-demand skills to stay ahead in a tech-driven market. Our comprehensive programs cover graphic design, where you’ll master tools like Adobe Photoshop and Canva; prompt AI & AI-driven content creation, leveraging tools like ChatGPT and Midjourney to enhance marketing strategies; UI/UX design, focusing on user-centric digital experiences; web & mobile app development, using modern frameworks like React, Flutter, and Django; and video editing, mastering software like Adobe Premiere Pro and DaVinci Resolve for high-quality content creation. Designed for aspiring digital marketers, entrepreneurs, designers, developers, and content creators, our courses provide hands-on training, expert insights, and flexible learning options to help you build a strong portfolio and excel in the evolving digital landscape. Enroll today at Ex Edu and future-proof your career with cutting-edge AI-powered marketing skills.",
   robots: "index, follow",
   alternates: {
-    canonical: "https://yourwebsite.com",
+    canonical: "https://exedu.in",
   },
   openGraph: {
     title: "exedu - Hybrid AI Education",
     description:
       "Boost your career with expert-led courses in digital marketing, AI, SEO, graphic design, and more.",
-    url: "https://yourwebsite.com",
+    url: "https://exedu.in/ex_edu_logo-03.png",
     images: [
       {
-        url: "https://yourwebsite.com/images/og-image.jpg",
+        url: "https://exedu.in/ex_edu_logo-03.png",
         width: 1200,
         height: 630,
         alt: "exedu - AI-Powered Education Platform",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "exedu - Learn AI, Digital Marketing, & More",
     description:
       "Master AI-driven digital marketing, SEO, and graphic design with our expert courses.",
-    images: ["https://yourwebsite.com/images/og-image.jpg"],
+    images: ["https://exedu.in/ex_edu_logo-03.png"],
   },
 };
 

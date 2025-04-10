@@ -133,7 +133,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-slate-500">
           <Image
-            src="/ex edu logo-03.png"
+            src="/ex_edu_logo-03.png"
             alt="logo"
             width={200}
             height={200}

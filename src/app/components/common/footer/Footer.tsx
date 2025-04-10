@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
         <div className="flex-col justify-center space-y-8">
           <div className="flex md:justify-end">
             <Image
-              src="/ex edu logo-03.png"
+              src="/ex_edu_logo-03.png"
               alt="logo"
               width={200}
               height={200}
