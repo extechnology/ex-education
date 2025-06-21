@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useImages } from "@/app/hooks/image-hook";
-import Link from "next/link";
 
 const Hero: React.FC = () => {
   const { data, isLoading, error } = useImages();

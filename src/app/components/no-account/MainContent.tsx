@@ -17,7 +17,7 @@ import ProfileModal from "../profile/ProfileModal"; // Import your modal compone
 import {RedirectToSignIn } from "@clerk/clerk-react";
 
 const MainContent = () => {
-  const { isSignedIn,user } = useUser(); // Check user authentication status
+  const { isSignedIn } = useUser(); // Check user authentication status
   const [showModal, setShowModal] = useState(false); // Modal state
   const [redirect, setRedirect] = useState(false);
 
