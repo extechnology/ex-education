@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useUser } from "@clerk/nextjs";
+import { useUser, SignedIn } from "@clerk/nextjs";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "../ui/button";
 import {
@@ -17,7 +17,7 @@ import ProfileModal from "../profile/ProfileModal"; // Import your modal compone
 import {RedirectToSignIn } from "@clerk/clerk-react";
 
 const MainContent = () => {
-  const { isSignedIn } = useUser(); // Check user authentication status
+  const { isSignedIn,user } = useUser(); // Check user authentication status
   const [showModal, setShowModal] = useState(false); // Modal state
   const [redirect, setRedirect] = useState(false);
 
@@ -86,6 +86,9 @@ const MainContent = () => {
                     Create Your Profile
                     <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
+                  <SignedIn>
+                    {/* <p>you are signed in as : {user?.email}</p> */}
+                  </SignedIn>
                 </Button>
               </motion.div>
             </CardFooter>
@@ -98,7 +101,7 @@ const MainContent = () => {
         <ProfileModal
           isOpen={showModal}
           onClose={() => setShowModal(false)}
-          onSubmit={handleFormSubmit} // ✅ Correct prop name
+          onSubmit={handleFormSubmit}
         />
       )}
     </main>

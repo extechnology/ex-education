@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     title: "exedu - Hybrid AI Education",
     description:
       "Boost your career with expert-led courses in digital marketing, AI, SEO, graphic design, and more.",
-    url: "https://ex-education.vercel.app/ex_edu_logo-3.png",
+    url: "https://exedu.in/ex_edu_logo-3.png",
     images: [
       {
-        url: "https://ex-education.vercel.app/ex_edu_logo-3.png",
+        url: "https://exedu.in/ex_edu_logo-3.png",
         width: 1200,
         height: 630,
         alt: "exedu - AI-Powered Education Platform",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "exedu - Learn AI, Digital Marketing, & More",
     description:
       "Master AI-driven digital marketing, SEO, and graphic design with our expert courses.",
-    images: ["https://ex-education.vercel.app/ex_edu_logo-3.png"],
+    images: ["https://exedu.in/ex_edu_logo-3.png"],
   },
 };
 

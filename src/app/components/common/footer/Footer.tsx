@@ -97,11 +97,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 space-y-4 md:space-y-0">
           <div className="">
             {/* <Image src="/EX_TECHNOLOGY_LOGO-01.png" alt="" height={70} width={70} /> */}
-            <p className="text-sm font-light">Our Parent Company is exmedia</p>
+            <p className="text-sm font-light text-gray-300">Our Parent Company is exmedia</p>
           </div>
           <div className="relative flex md:justify-center">
             <p
-              className="cursor-pointer hover:text-gray-300 transition-all text-sm font-light"
+              className="cursor-pointer hover:text-gray-200 transition-all text-sm text-gray-300 font-light"
               onMouseEnter={() => setShowPopup(true)}
               onMouseLeave={() => setShowPopup(false)}
             >
@@ -137,7 +137,7 @@ const Footer: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          <div className="flex md:justify-end text-sm font-light gap-1">
+          <div className="flex md:justify-end text-sm font-light gap-1 text-gray-300">
             <div>
               <Link href={"/privacy"}>Privacy Policy |</Link>
             </div>

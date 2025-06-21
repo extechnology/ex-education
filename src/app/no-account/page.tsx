@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import MainContent from "../components/no-account/MainContent";
 import { useRouter } from "next/navigation";
-import { useUser, useAuth } from "@clerk/nextjs";
+import { useUser, useAuth, } from "@clerk/nextjs";
 
 const NoAccount = () => {
   const containerRef = useRef<HTMLDivElement>(null);
