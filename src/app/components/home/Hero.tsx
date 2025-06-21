@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   )?.image;
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
         <Image
           src={heroImage}
           alt="hero"
